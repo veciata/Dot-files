@@ -1,0 +1,148 @@
+  * {
+        bg:  #1a1c23;
+        background-color: @bg;
+    }
+
+    configuration {
+	    show-icons: true;
+	    icon-theme: "Draclua";
+	    location: 0;
+	    font: "JetBrainsMono Nerd Font 12";
+	    display-drun: "Launch";
+    }
+
+    window {
+	    width: 40%;
+	    transparency: "real";
+	    orientation: vertical;
+	    border-color: #7c8389;
+        border-radius: 10px;
+    }
+
+    mainbox {
+	    children: [inputbar, listview];
+    }
+
+
+    // ELEMENT
+    // -----------------------------------
+
+    element {
+	    padding: 4 12;
+	    text-color: #1a1c23;
+        border-radius: 5px;
+    }
+
+    element selected {
+	    text-color: #ffffff;
+	    background-color: #ffb454;
+    }
+
+    element-text {
+	    background-color: inherit;
+	    text-color: inherit;
+    }
+
+    element-icon {
+	    size: 16 px;
+	    background-color: inherit;
+	    padding: 0 6 0 0;
+	    alignment: vertical;
+    }
+
+	element.selected.active {
+		background-color: #1a1c23;
+		text-color: #bbbdbe;
+	}
+
+	element.alternate.normal {
+		background-color: #1a1c23;
+		text-color: #bbbdbe;
+	}
+
+
+	element.alternate.active {
+		background-color: #484d63;
+		text-color: #bbbdbe;
+	}
+
+	element.selected.normal {
+		background-color: #484d63;
+		text-color: #1a1c23;
+	}
+
+
+	element.normal.active {
+		background-color: #1a1c23;
+		text-color: #bbbdbe;
+	}
+
+
+	element.normal.normal {
+		background-color: #1a1c23;
+		text-color: #bbbdbe;
+	}
+
+	element.normal.urgent {
+		background-color: #2d303b;
+		text-color: #1a1c23;
+	}
+
+    // LIST VIEW
+    //------------------------------------------------
+
+    listview {
+	    columns: 1;
+	    lines: 11;
+	    padding: 8 0;
+	    fixed-height: true;
+	    fixed-columns: true;
+	    fixed-lines: true;
+	    border: 0;
+        scrollbar: false;
+    }
+
+    // INPUT BAR
+    //------------------------------------------------
+
+    entry {
+	    text-color: #f27893;
+	    padding: 10 10 0 0;
+	    margin: 0 -2 0 -6;
+        placeholder: "Search";
+    }
+
+    inputbar {
+	    background-image: url("~/dotfiles/hypr/assets/rofi.png", width);
+	    padding: 240 0 0;
+	    margin: 0 -2 0 0;
+    }
+
+    prompt {
+	    text-color: #bd93f9;
+	    padding: 10 6 0 10;
+	    margin: 0 -2 0 0;
+    }
+
+    // MESSAGE
+    //------------------------------------------------
+
+    message {
+        background-color:           #1a1c23;
+        margin:						0 -2 0 0;
+        border-radius: 				10px;
+    }
+
+    textbox {
+        padding:                    10px;
+        background-color:      		#1a1c23;
+        text-color:                 #bd93f9;
+    }
+
+    error-message {
+        padding:                    15px;
+        border-radius:            	10px;
+        background-color:      		#1a1c23;
+        text-color:                 #bd93f9;
+    }
+
