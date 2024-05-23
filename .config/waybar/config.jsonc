@@ -53,7 +53,7 @@
 		"tooltip-format": "{status}"
 	},
 	"clock": {
-		"format": " 󰀢{:%H:%M}",
+		"format": " 󰀢  {:%H:%M}",
 		"tooltip": "true",
 		"tooltip-format": "<tt>{calendar}</tt>",
 		"format-alt": "󰃱 {:%d/%m/%Y}"
