@@ -28,8 +28,8 @@ To use this configuration, follow these steps:
     cp -r Dot-files/.config/ ~/
     cp Dot-files/.zshrc ~/
 3. install nesseserry packages
- ```sh
-sudo pacman -Syu hyprland waybar rofi zsh alacritty neovim swaybg wl-clipboard brightnessctl pavucontrol grim slurp thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme
+    ```sh
+   sudo pacman -Syu hyprland waybar rofi zsh alacritty neovim swaybg wl-clipboard brightnessctl pavucontrol grim slurp thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme
 
 
 Configuration Files
