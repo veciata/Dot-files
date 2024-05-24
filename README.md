@@ -22,12 +22,15 @@ To use this configuration, follow these steps:
 
     Copy the configuration files to your home directory:
 
-    sh
+2. manually link your config or clone like here
+    ```sh
 
     cp -r Dot-files/.config/ ~/
     cp Dot-files/.zshrc ~/
+3. install nesseserry packages
+ ```sh
+sudo pacman -Syu hyprland waybar rofi zsh alacritty neovim swaybg wl-clipboard brightnessctl pavucontrol grim slurp thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme
 
-    Ensure you have Hyprland installed on your system. You can find installation instructions here.
 
 Configuration Files
 
