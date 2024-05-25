@@ -39,7 +39,7 @@ Here are some of the keybindings defined in the configuration:
 
     Super + Return: Open terminal
     Super + D: Open application launcher (rofi)
-    Super + Q: Close focused window
+    Super + Q or Alt + F4: Close focused window
     Super + H/J/K/L: Move focus between windows
     Super + Shift + H/J/K/L: Move windows
     Super + F: Toggle fullscreen
