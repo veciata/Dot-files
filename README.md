@@ -5,7 +5,6 @@ Welcome to my Hyprland configuration repository! This setup is optimized for a d
 ## Table of Contents
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Configuration Files](#configuration-files)
 - [Keybindings](#keybindings)
 - [Screenshots](#screenshots)
 - [Credits](#credits)
@@ -32,6 +31,30 @@ To use this configuration, follow these steps:
    sudo pacman -Syu hyprland waybar rofi zsh alacritty neovim swaybg wl-clipboard brightnessctl pavucontrol grim slurp thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme
 
 
-Configuration Files
 
-The main configuration
+
+Keybindings
+
+Here are some of the keybindings defined in the configuration:
+
+    Super + Return: Open terminal
+    Super + D: Open application launcher (rofi)
+    Super + Q: Close focused window
+    Super + H/J/K/L: Move focus between windows
+    Super + Shift + H/J/K/L: Move windows
+    Super + F: Toggle fullscreen
+    Super + E: File manager
+    Super + W: Web browser
+    Super + (1-0): Workspaces 1 to 10 monitor 1
+    SuperAlt + (1-0): Workspaces 11-20 monitor 2
+
+Screenshots
+
+
+Credits
+
+    Hyprland
+    Waybar
+    Rofi
+
+Feel free to customize and extend the configuration to suit your needs. If you encounter any issues or have suggestions, please open an issue on this repository.
