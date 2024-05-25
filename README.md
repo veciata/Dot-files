@@ -1,4 +1,4 @@
-# Hyprland Configuration for a 2 Monitor Setup
+# Hyprland Configuration for my 2 Monitor Setup
 
 Welcome to my Hyprland configuration repository! This setup is optimized for a dual monitor system.
 
