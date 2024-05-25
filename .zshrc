@@ -75,10 +75,14 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls --color'
 alias vi='nvim'
 alias c='clear'
 
+alias lal="eza --tree --level=2"
+alias neofetch="neofetch --ascii ~/.config/neofetch/turki.txt"
+alias ls="eza"
+alias la="eza -a"
+alias ll="eza -l"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
