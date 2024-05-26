@@ -3,11 +3,14 @@
 Welcome to my Hyprland configuration repository! This setup is optimized for a dual monitor system.
 
 ## Table of Contents
+- [Screenshots](#screenshots)
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Keybindings](#keybindings)
-- [Screenshots](#screenshots)
 - [Credits](#credits)
+
+## Screenshots
+![Main](Screenshots/Screenshot.png)
 
 ## Introduction
 This repository contains my personal configuration files for [Hyprland](https://github.com/hyprwm/Hyprland), a dynamic tiling Wayland compositor. The configuration is tailored for a two-monitor setup and includes settings for various applications and utilities to enhance productivity.
@@ -48,8 +51,6 @@ Here are some of the keybindings defined in the configuration:
     Super + (1-0): Workspaces 1 to 10 monitor 1
     SuperAlt + (1-0): Workspaces 11-20 monitor 2
 
-Screenshots
-![Main](Screenshots/Screenshot.png)
 
 Credits
 
