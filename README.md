@@ -49,6 +49,7 @@ Here are some of the keybindings defined in the configuration:
     SuperAlt + (1-0): Workspaces 11-20 monitor 2
 
 Screenshots
+![Main](Screenshots/Screenshot.png)
 
 Credits
 
