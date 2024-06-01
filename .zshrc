@@ -78,6 +78,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias vi='nvim'
 alias c='clear'
 
+alias ai="ollama run dolphin-llama3"
 alias lal="eza --tree --level=2"
 alias neofetch="neofetch --ascii ~/.config/neofetch/turki.txt"
 alias ls="eza"
