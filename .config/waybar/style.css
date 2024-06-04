@@ -18,7 +18,7 @@ window#waybar {
 }
 
 #workspaces {
-  background: #282828;
+  background: #24283b;
   margin: 5px 5px 5px 5px;
   padding: 0px 5px 0px 5px;
   border-radius: 16px;
@@ -45,13 +45,15 @@ window#waybar {
 }
 
 #custom-date,
-#clock,
+#custom-clock,
+#custom-weather,
 #battery,
+#bluetooth,
 #pulseaudio,
 #network,
 #custom-randwall,
 #custom-launcher {
-  background: transparent;
+  background: #24283b;
   padding: 5px 5px 5px 5px;
   margin: 5px 5px 5px 5px;
   border-radius: 8px;
@@ -81,9 +83,9 @@ window#waybar {
   /*border-right: solid 1px #282738;*/
 }
 
-#clock {
+#custom-clock {
   color: #e6b9c6;
-  background-color: #282828;
+  background-color: #24283b;
   border-radius: 0px 0px 0px 24px;
   padding-left: 13px;
   padding-right: 15px;
@@ -111,8 +113,7 @@ window#waybar {
 
 #backlight {
   background-color: #24283b;
-  color: #db4b4b;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 16px;
   margin: 5px;
   margin-left: 0px;
   margin-right: 0px;
@@ -146,7 +147,7 @@ window#waybar {
 
 #custom-launcher {
   color: #e5809e;
-  background-color: #282828;
+  background-color: #24283b;
   border-radius: 0px 24px 0px 0px;
   margin: 0px 0px 0px 0px;
   padding: 0 20px 0 13px;
@@ -163,7 +164,7 @@ window#waybar {
 }
 
 #custom-playerctl {
-  background: #282828;
+  background: #24283b;
   padding-left: 15px;
   padding-right: 14px;
   border-radius: 16px;
@@ -191,7 +192,7 @@ window#waybar {
 }
 
 #window {
-  background: #282828;
+  background: #24283b;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 16px;
@@ -251,6 +252,10 @@ window#waybar {
   margin-right: 5px;
   padding: 0px 11px 0px 9px;
   font-weight: bold;
+}
+#custom-weather {
+  background-color: #24283b;
+  border-radius: 16px;
 }
 #custom-weather.severe {
   color: #eb937d;
