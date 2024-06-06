@@ -85,5 +85,5 @@ alias la="eza -a"
 alias ll="eza -l"
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --cmd z zsh)"
 
