@@ -1,5 +1,4 @@
 #!/bin/sh
-bind=SUPER,C,killactive
 
 down() {
 	pamixer -d 5

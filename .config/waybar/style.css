@@ -117,7 +117,7 @@ window#waybar {
   margin: 5px;
   margin-left: 0px;
   margin-right: 0px;
-  padding: 0px 0px;
+  padding: 0px 10px;
 }
 
 #network {
@@ -254,7 +254,6 @@ window#waybar {
   font-weight: bold;
 }
 #custom-weather {
-  background-color: #24283b;
   border-radius: 16px;
 }
 #custom-weather.severe {
@@ -263,10 +262,6 @@ window#waybar {
 
 #custom-weather.sunnyDay {
   color: #c2ca76;
-}
-
-#custom-weather.clearNight {
-  color: #2b2b2a;
 }
 
 #custom-weather.cloudyFoggyDay,
