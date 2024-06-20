@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-
-timeswaylock=60
+timebrt=30
+timelock=60
 timeoff=100
-crtbrtnes=$CURRENT_BRIGHTNESS
+crtbrtnes="brightnessctl get"
 swayidle \
-	timeout $timeswaylock 'sleep 1 && wallock -o lock' \
-	timeout 45 "CURRENT_BRIGHTNESS=$(brightnessctl get); brightnessctl set $(($CURRENT_BRIGHTNESS / 2))" \
+	timeout $timelock 'wallock -o lock' \
+	timeout $timebrt "brightnessctl set $crtbrtnes/2" \
 	timeout $timeoff 'hyprctl dispatch dpms off' \
-	resume "hyprctl dispatch dpms on & brightnessctl set $crtbrtnes
+	resume "hyprctl dispatch dpms on & brightnessctl set $crtbrtnes"
