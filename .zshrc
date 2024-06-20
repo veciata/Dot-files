@@ -83,7 +83,8 @@ alias neofetch="neofetch --ascii ~/.config/neofetch/turki.txt"
 alias ls="eza"
 alias la="eza -a"
 alias ll="eza -l"
+alias f="fuck"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd z zsh)"
-
+eval $(thefuck --alias) 
