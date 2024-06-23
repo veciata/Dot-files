@@ -33,7 +33,7 @@ To use this configuration, follow these steps:
     ```sh
     sudo pacman -Syu hyprland waybar rofi zsh alacritty neovim wl-clipboard brightnessctl pavucontrol\
     grim slurp thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
-    ttf-firacode-nerd ttf-iosevka-nerd wallock swayidle zoxide exa brillo
+    ttf-firacode-nerd ttf-iosevka-nerd wallock hypridle zoxide exa brillo
 
     ```
 
