@@ -75,6 +75,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias vi='nvim'
+alias lvim='/home/veciata/.local/bin/lvim'
 alias c='clear'
 
 alias ai="ollama run llama3:70b"

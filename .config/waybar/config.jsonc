@@ -50,7 +50,7 @@
 		"format-alt": "bluetooth: {status}",
 		"format-on": "󰂯",
 		"format-off": "󰂲",
-		"on-click": "blueberry",
+		"on-click-right": "blueberry",
 		"tooltip-format": "{status}"
 	},
 	"clock": {
@@ -216,10 +216,10 @@
   "ignored-sinks": ["Easy Effects Sink"],
 },
   "scroll-step": 5.0,
-  "on-click": "~/.config/hypr/scripts/Volume.sh --mute",
+  "on-click": "~/.config/hypr/scripts/Volume.sh mute",
   "on-click-right": "pavucontrol",
-  "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --up",
-  "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --down",
+  "on-scroll-up": "~/.config/hypr/scripts/Volume.sh up",
+  "on-scroll-down": "~/.config/hypr/scripts/Volume.sh down",
   "smooth-scrolling-threshold": 1,
 },
 	"custom/randwall": {

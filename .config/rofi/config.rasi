@@ -5,7 +5,7 @@
 
     configuration {
 	    show-icons: true;
-	    icon-theme: "Draclua";
+	    icon-theme: "Papirus-Apps";
 	    location: 0;
 	    font: "JetBrainsMono Nerd Font 12";
 	    display-drun: "Launch";
