@@ -52,9 +52,10 @@ window#waybar {
 #pulseaudio,
 #network,
 #custom-randwall,
+#custom-updates,
 #custom-launcher {
   background: #24283b;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 8px;
   margin: 5px 5px 5px 5px;
   border-radius: 8px;
   border: solid 0px #f4d9e1;

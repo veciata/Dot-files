@@ -1,4 +1,5 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+fastfetch
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -73,6 +74,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+
 # Aliases
 alias vi='nvim'
 alias lvim='/home/veciata/.local/bin/lvim'
@@ -80,7 +82,6 @@ alias c='clear'
 
 alias ai="ollama run llama3:70b"
 alias lal="eza --tree --level=2"
-alias neofetch="neofetch --ascii ~/.config/neofetch/turki.txt"
 alias ls="eza"
 alias la="eza -a"
 alias ll="eza -l"

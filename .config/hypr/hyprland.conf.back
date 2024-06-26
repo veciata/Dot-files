@@ -51,7 +51,6 @@ exec-once=fcitx5 -D
 # For lockscreen
 
 
-
 # swayidle_config
 windowrulev2 = idleinhibit fullscreen, fullscreen:1
 exec-once=~/.config/hypr/scripts/screenlock.sh
@@ -71,6 +70,7 @@ exec-once = systemctl --user import-environment &
 exec-once = hash dbus-update-activation-environment 2>/dev/null &
 exec-once = dbus-update-activation-environment --systemd &
 # some default env vars.
+#
 env= XCURSOR_SIZE=21
 env=wayland,x11
 env = QT_QPA_PLATFORM,wayland;xcb
@@ -82,12 +82,10 @@ env = LIBVA_DRIVER_NAME,nvidia
 env = XDG_SESSION_TYPE,wayland
  env = GBM_BACKEND,nvidia-drm
 env = __GLX_VENDOR_LIBRARY_NAME,nvidia
- env = GTK_THEME,Adwaita:dark
 
 
 env = WLR_NO_HARDWARE_CURSORS,1
 
-env = GTK_THEME,Adwaita:dark
 ### Input configuration
 input {
   # Remap Capslock -> Esc & Esc-> Capslock for Vim users  

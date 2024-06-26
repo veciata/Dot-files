@@ -9,8 +9,8 @@ if [ -n "$input" ]; then
     # Replace the following line with the actual command you want to run, using $input
     result=$(tgpt "$input")
 
-    # Launch Alacritty and display the result
-    alacritty -e sh -c "echo \"$result\"; read -p \"Press Enter to close...\""
+    # Launch kitty and display the result
+    kitty -e sh -c "echo \"$result\"; read -p \"Press Enter to close...\""
 else
     # If no input provided, show a message
     rofi -e "No input provided."
