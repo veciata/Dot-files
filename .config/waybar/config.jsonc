@@ -8,7 +8,7 @@
   "margin-right": 0,
   "modules-left": [
     "hyprland/workspaces",
-    "hyprlandtaskbar",
+    "wlr/taskbar",
     "custom/playerctl",
     "custom/playerlabel"
   ],
@@ -30,7 +30,7 @@
     "custom/clock"
   ],
   // Modules configuration
-  "hyprland/taskbar": {
+  "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 14,
     "icon-theme": "Numix-Circle",
@@ -38,14 +38,13 @@
     "on-click": "activate",
     "on-click-middle": "close",
     "ignore-list": [
-      "Alacritty"
+      "kitty"
     ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition"
     },
     "rewrite": {
       "Firefox Web Browser": "Firefox",
-      "Foot Server": "Terminal"
     }
   },
   "custom/updates": {

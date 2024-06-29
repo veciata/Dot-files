@@ -17,7 +17,7 @@ window#waybar {
 
 #workspaces {
   background: @color1;
-  margin: 5px;
+  margin: 3px;
   padding: 0px 5px;
   border-radius: 16px;
   border: solid 0px @color3;
@@ -44,13 +44,14 @@ window#waybar {
 }
 
 #custom-date,
+#wlr-taskbar,
 #custom-clock,
 #custom-weather,
 #battery,
 #cpu,
 #memory,
 #disk,
-#custom-hyprpicker, 
+#custom-hyprpicker,
 #bluetooth,
 #tray,
 #pulseaudio,
@@ -60,7 +61,7 @@ window#waybar {
 #custom-launcher {
   background: @color1;
   padding: 5px 8px;
-  margin: 5px;
+  margin: 3px;
   border-radius: 8px;
   border: solid 0px @color3;
 }
@@ -112,14 +113,14 @@ window#waybar {
 #backlight {
   background-color: @color1;
   border-radius: 16px;
-  margin: 5px;
+  margin: 3px;
   padding: 0px 10px;
 }
 
 #network {
   color: @color3;
   border-radius: 8px;
-  margin-right: 5px;
+  margin-right: 3px;
 }
 
 #pulseaudio {
@@ -173,10 +174,11 @@ window#waybar {
 
 #custom-playerlabel {
   background: transparent;
+  color: @color3;
   padding-left: 10px;
   padding-right: 15px;
   border-radius: 16px;
-  margin-top: 5px;
+  margin-top: 3px;
   margin-bottom: 5px;
   font-weight: normal;
   font-style: normal;
