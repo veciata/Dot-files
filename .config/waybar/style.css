@@ -131,7 +131,7 @@ window#waybar {
 }
 
 #pulseaudio.muted {
-  background: transparent;
+  background: @color1;
   color: #928374;
   border-radius: 8px;
   margin-left: 0px;

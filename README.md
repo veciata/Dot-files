@@ -13,6 +13,8 @@ Welcome to my Hyprland configuration repository! This setup is optimized for a d
 ![Main](Screenshots/Screenshot.png)
 
 ![Main](Screenshots/Screenshot2.jpeg)
+
+![Main](Screenshots/screenshot.png)
 ## Introduction
 This repository contains my personal configuration files for [Hyprland](https://github.com/hyprwm/Hyprland), a dynamic tiling Wayland compositor. The configuration is tailored for a two-monitor setup and includes settings for various applications and utilities to enhance productivity.
 
