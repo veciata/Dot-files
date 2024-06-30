@@ -19,6 +19,7 @@
   ],
   "modules-right": [
     "tray",
+    "custom/dunst_history",
     "custom/updates",
     "custom/prayer",
     "network",
@@ -46,6 +47,12 @@
     "rewrite": {
       "Firefox Web Browser": "Firefox",
     }
+  },
+  "custom/dunst_history": {
+    "format": "{󰂚}",
+    "exec": "~/.config/waybar/scripts/dunst.sh",
+    "interval": 60,
+    "tooltip": true
   },
   "custom/updates": {
     "format": " {}",
