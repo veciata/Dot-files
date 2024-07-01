@@ -49,7 +49,7 @@
     }
   },
   "custom/dunst_history": {
-    "format": "{󰂚}",
+    "format": "󰂚",
     "exec": "~/.config/waybar/scripts/dunst.sh",
     "interval": 60,
     "tooltip": true
@@ -64,9 +64,10 @@
     "signal": 8
   },
   "bluetooth": {
-    "format-alt": "bluetooth: {status}",
+    "format-alt": "{status}",
     "format-on": "󰂯",
     "format-off": "󰂲",
+    "format-connected":"󰂱 ",
     "on-click-right": "blueberry",
     "tooltip-format": "{status}"
   },
@@ -115,16 +116,12 @@
       "eDP-2": [
         1,
         2,
-        3,
-        4,
-        5
+        3
       ],
       "HDMI-A-1": [
         11,
         12,
-        13,
-        14,
-        15
+        13
       ]
     }
   },
@@ -225,7 +222,7 @@
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon}  {volume}%",
+    "format-bluetooth": "{icon} 󰂯 {volume}%",
     "format-muted": " Mute",
     "format-icons": {
       "headphone": "",
@@ -233,7 +230,6 @@
       "headset": "",
       "phone": "",
       "portable": "",
-      "car": "",
       "default": [
         "",
         "",
@@ -250,18 +246,8 @@
     "on-scroll-down": "~/.config/hypr/scripts/Volume.sh down",
     "smooth-scrolling-threshold": 1,
   },
-  "custom/randwall": {
-    "format": "󰏘",
-    "on-click": "bash $HOME/.config/hypr/randwall.sh",
-    "on-click-right": "bash $HOME/.config/hypr/wall.sh"
-  },
-  "custom/launcher": {
-    "format": "󰈸",
-    "on-click": "bash $HOME/.config/rofi/launcher.sh",
-    //    "on-click": "wofi --show drun -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css",
-    "on-click-right": "bash $HOME/.config/rofi/run.sh"
-    //    "on-click-right": "wofi --show run -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css"  
-  },
+ 
+
   "custom/wf-recorder": {
     "format": "{}",
     "interval": "once",
