@@ -19,7 +19,6 @@
   ],
   "modules-right": [
     "tray",
-    "custom/dunst_history",
     "custom/updates",
     "custom/prayer",
     "network",
@@ -55,7 +54,7 @@
     "tooltip": true
   },
   "custom/updates": {
-    "format": " {}",
+    "format": "󰇚 {}",
     "exec": "updates=$(checkupdates); if [ -z \"$updates\" ]; then echo ''; else echo \"$updates\" | wc -l; echo \"$updates\" | column -t | tr '\n' '\r'; fi",
     "interval": 7200, // every two hours
     //"exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'", // # of updates and tooltip details
@@ -77,16 +76,16 @@
     "format": "{}"
   },
   "clock": {
-    "format": " 󰀢  {:%H:%M}",
+    "format": "  󰀢 {:%H:%M}",
     "tooltip": "true",
     "tooltip-format": "<tt>{calendar}</tt>",
     "format-alt": "󰃱 {:%d/%m/%Y}"
   },
   "custom/clock": {
-    "exec": "date +' %H:%M  %d/%m'",
+    "exec": "date +' %H:%M   %d/%m  󰃱 '",
     "interval": 1,
     "tooltip": false,
-    "on-click": "alacritty -e 'calcurse'"
+    "on-click": "kitty -e 'calcurse'"
   },
   "hyprland/workspaces": {
     "sort-by-number": true,
@@ -102,18 +101,26 @@
       "3": "三",
       "4": "四",
       "5": "五",
-      "6": "󰊴",
-      "7": "",
+      "6": "󰊴 ",
+      "7": " ",
+      "8": "八",
+      "9": "九",
+      "10": "十",
       "11": "1",
       "12": "2",
       "13": "3",
       "14": "4",
       "15": "5",
+      "16": "6",
+      "17":"7",
+      "18":"8",
+      "19":"9",
+      "20":"10",
       "urgent": "󰧞",
       "default": "󰄰"
     },
     "persistent-workspaces": {
-      "eDP-2": [
+      "eDP-1": [
         1,
         2,
         3
@@ -164,11 +171,11 @@
       "warning": 20,
       "critical": 10
     },
-    "format": "{icon}  {capacity}%",
-    "format-charging": "{capacity}% 󰂄",
-    "format-plugged": "{capacity}% 󰂅",
-    "format-alt": "{icon} {time}",
-    "format-good": " ", // An empty format will hide the module
+    "format": " {capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂄 ",
+    "format-plugged": "{capacity}% 󰂅  ",
+    "format-alt": " {time} {icon}",
+    "format-good": "",
     "format-full": "",
     "format-icons": [
       "󰂃",
@@ -196,10 +203,10 @@
   },
   "network": {
     "format-wifi": "󰤨 ",
-    "format-ethernet": "",
-    "format-linked": " (No IP)",
-    "format-disconnected": "󰤭",
-    "format-alt": " {ifname}: {ipaddr}/{cidr}",
+    "format-ethernet": " ",
+    "format-linked": " (No IP)",
+    "format-disconnected": "󰤭 ",
+    "format-alt": " {ifname}: {ipaddr}/{cidr}",
     "tooltip-format": "{essid}",
     "on-click-right": "bash ~/.config/hypr/rofi-wifi.sh",
   },
@@ -212,10 +219,10 @@
     // 	 "device": "acpi_video1",
     "format": "{icon} {percent}%",
     "format-icons": [
-      "󰃞",
-      "󰃝",
-      "󰃟",
-      "󰃠"
+      "󰃞 ",
+      "󰃝 ",
+      "󰃟 ",
+      "󰃠 "
     ],
     "on-scroll-up": "~/.config/hypr/scripts/brightness.sh up",
     "on-scroll-down": "~/.config/hypr/scripts/brightness.sh down"
@@ -223,17 +230,17 @@
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-bluetooth": "{icon} 󰂯 {volume}%",
-    "format-muted": " Mute",
+    "format-muted": "  Mute",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
       "default": [
-        "",
-        "",
-        ""
+        " ",
+        " ",
+        " "
       ],
       "ignored-sinks": [
         "Easy Effects Sink"
@@ -262,5 +269,4 @@
     "on-click": "hyprpicker -a -f hex",
     "on-click-right": "hyprpicker -a -f rgb"
   },
-}
 }

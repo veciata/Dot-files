@@ -15,6 +15,8 @@ Welcome to my Hyprland configuration repository! This setup is optimized for a d
 ![Main](Screenshots/Screenshot2.jpeg)
 
 ![Main](Screenshots/screenshot.png)
+
+![Main](Screenshots/Screenshot3.png)
 ## Introduction
 This repository contains my personal configuration files for [Hyprland](https://github.com/hyprwm/Hyprland), a dynamic tiling Wayland compositor. The configuration is tailored for a two-monitor setup and includes settings for various applications and utilities to enhance productivity.
 
@@ -36,7 +38,7 @@ To use this configuration, follow these steps:
     ```sh
     sudo pacman -Syu hyprland waybar rofi zsh alacritty neovim wl-clipboard brightnessctl pavucontrol\
     grim slurp thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
-    ttf-firacode-nerd ttf-iosevka-nerd wallock hypridle zoxide exa brillo
+    ttf-firacode-nerd ttf-iosevka-nerd wallock hypridle zoxide exa brillo oh-my-posh
 
     ```
 

@@ -5,16 +5,16 @@
 # You have to change this based on your monitor
 
 # Workspaces for $m1
-workspace=1,monitor:eDP-2
-workspace=2,monitor:eDP-2
-workspace=3,monitor:eDP-2
-workspace=4,monitor:eDP-2
-workspace=5,monitor:eDP-2
-workspace=6,monitor:eDP-2
-workspace=7,monitor:eDP-2
-workspace=8,monitor:eDP-2
-workspace=9,monitor:eDP-2
-workspace=10,monitor:eDP-2
+workspace=1,monitor:eDP-1
+workspace=2,monitor:eDP-1
+workspace=3,monitor:eDP-1
+workspace=4,monitor:eDP-1
+workspace=5,monitor:eDP-1
+workspace=6,monitor:eDP-1
+workspace=7,monitor:eDP-1
+workspace=8,monitor:eDP-1
+workspace=9,monitor:eDP-1
+workspace=10,monitor:eDP-1
 
 # Workspaces for $m2
 workspace=11,monitor:HDMI-A-1
@@ -28,7 +28,7 @@ workspace=18,monitor:HDMI-A-1
 workspace=19,monitor:HDMI-A-1
 workspace=20,monitor:HDMI-A-1
 
-monitor=eDP-2,1920x1080@144,0x0,1
+monitor=eDP-1,1920x1080@144,0x0,1
 monitor=HDMI-A-1,1366x768@60,1920x0,0.7
 #: Status bar :) 
 # exec-once=eww open bar
