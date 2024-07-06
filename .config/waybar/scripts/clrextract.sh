@@ -13,8 +13,8 @@ ffmpeg -i "$WALLPAPER_VIDEO" -ss 00:00:01 -vframes 1 -q:v 2 /tmp/wallpaper_frame
 # Use pywal to get the colors from the extracted frame
 wal -i /tmp/wallpaper_frame.png
 
-# Extract colors from the pywal generated file
-colors=($(awk 'NR>=2 && NR<=7 {print $1}' ~/.cache/wal/colors))
+# Extract colors from the pywal generated file (increase range to get more colors)
+colors=($(awk 'NR>=2 && NR<=13 {print $1}' ~/.cache/wal/colors))
 
 # Debug print to check extracted colors
 echo "Extracted colors: ${colors[@]}"
@@ -38,14 +38,17 @@ done | sort -n | awk '{print $2}'))
 # Debug print to check sorted colors
 echo "Sorted colors: ${sorted_colors[@]}"
 
+# Manually select the 1st, 3rd, 5th, 7th, 9th, and 11th colors
+selected_colors=("${sorted_colors[0]}" "${sorted_colors[2]}" "${sorted_colors[4]}" "${sorted_colors[6]}" "${sorted_colors[8]}" "${sorted_colors[10]}")
+
 # Update Waybar CSS file
 {
-  echo "@define-color color1 ${sorted_colors[0]};"
-  echo "@define-color color2 ${sorted_colors[1]};"
-  echo "@define-color color3 ${sorted_colors[2]};"
-  echo "@define-color color4 ${sorted_colors[3]};"
-  echo "@define-color color5 ${sorted_colors[4]};"
-  echo "@define-color color6 ${sorted_colors[5]};"
+  echo "@define-color color1 ${selected_colors[0]};"
+  echo "@define-color color2 ${selected_colors[1]};"
+  echo "@define-color color3 ${selected_colors[2]};"
+  echo "@define-color color4 ${selected_colors[3]};"
+  echo "@define-color color5 ${selected_colors[4]};"
+  echo "@define-color color6 ${selected_colors[5]};"
 } > "$WAYBAR_CSS"
 
 echo "Waybar CSS updated with the top 6 colors from your wallpaper."

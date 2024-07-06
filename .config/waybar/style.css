@@ -1,4 +1,4 @@
-@import url("/home/veciata/.config/waybar/theme/moonray.css");
+@import url("/home/veciata/.config/waybar/theme/tokyonight.css");
 
 * {
   border: none;
@@ -10,17 +10,17 @@
 }
 
 window#waybar {
-  background: rgba(30, 30, 46, 0.5);
-  border-bottom: 1px solid @color2;
-  color: @color3;
+  background: @color1;
+  border-bottom: 1px solid @color5;
+  color: @color6;
 }
 
 #workspaces {
-  background: @color1;
+  background: @color2;
   margin: 3px;
   padding: 0px 5px;
   border-radius: 16px;
-  border: solid 0px @color3;
+  border: solid 0px @color6;
   font-weight: normal;
   font-style: normal;
 }
@@ -28,17 +28,17 @@ window#waybar {
 #workspaces button {
   padding: 0px 5px;
   border-radius: 16px;
-  color: #928374;
+  color: @color4;
 }
 
 #workspaces button.active {
-  color: @color3;
+  color: @color6;
   background-color: transparent;
   border-radius: 16px;
 }
 
 #workspaces button:hover {
-  background-color: @color4;
+  background-color: @color3;
   color: black;
   border-radius: 16px;
 }
@@ -60,19 +60,16 @@ window#waybar {
 #custom-randwall,
 #custom-updates,
 #custom-launcher {
-  background: @color1;
+  background: @color2;
   padding: 5px 8px;
   margin: 3px;
   border-radius: 8px;
-  border: solid 0px @color3;
+  border: solid 0px @color6;
 }
 
-#custom-date {
-  color: @color6;
-}
 
 #custom-power {
-  color: @color1;
+  color: @color2;
   background-color: #db4b4b;
   border-radius: 5px;
   margin-right: 10px;
@@ -82,11 +79,9 @@ window#waybar {
   padding: 5px 10px;
 }
 
-
-
 #custom-clock {
   color: @color4;
-  background-color: @color1;
+  background-color: @color2;
   border-radius: 0px 0px 0px 24px;
   padding-left: 13px;
   padding-right: 15px;
@@ -98,54 +93,54 @@ window#waybar {
 }
 
 #battery {
-  color: @color5;
+  color: @color4;
 }
 
 #battery.charging {
-  color: @color5;
+  color: green;
 }
 
 #battery.warning:not(.charging) {
   background-color: #f7768e;
-  color: @color1;
+  color: white;
   border-radius: 5px;
 }
 
 #backlight {
-  background-color: @color1;
+  background-color: @color2;
   border-radius: 16px;
   margin: 3px;
   padding: 0px 10px;
 }
 
 #network {
-  color: @color3;
+  color: @color6;
   border-radius: 8px;
   margin-right: 3px;
 }
 
 #pulseaudio {
-  color: @color3;
+  color: @color6;
   border-radius: 8px;
   margin-left: 0px;
 }
 
 #pulseaudio.muted {
-  background: @color1;
+  background: @color2;
   color: #928374;
   border-radius: 8px;
   margin-left: 0px;
 }
 
 #custom-randwall {
-  color: @color3;
+  color: @color6;
   border-radius: 8px;
   margin-right: 0px;
 }
 
 #custom-launcher {
-  color: @color4;
-  background-color: @color1;
+  color: @color3;
+  background-color: @color2;
   border-radius: 0px 24px 0px 0px;
   margin: 0px;
   padding: 0 20px 0 13px;
@@ -161,7 +156,8 @@ window#waybar {
 }
 
 #custom-playerctl {
-  background: @color1;
+  background: @color2;
+  color: @color6;
   padding-left: 15px;
   padding-right: 14px;
   border-radius: 16px;
@@ -175,7 +171,7 @@ window#waybar {
 
 #custom-playerlabel {
   background: transparent;
-  color: @color3;
+  color: @color6;
   padding-left: 10px;
   padding-right: 15px;
   border-radius: 16px;
@@ -186,7 +182,7 @@ window#waybar {
 }
 
 #window {
-  background: @color1;
+  background: @color2;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 16px;
@@ -198,11 +194,9 @@ window#waybar {
 
 #custom-wf-recorder {
   padding: 0 20px;
-  color: @color4;
+  color: @color3;
   background-color: #1e1e2e;
 }
-
-
 
 #custom-hyprpicker {
   padding: 0px 11px 0px 9px;
@@ -210,7 +204,7 @@ window#waybar {
 
 #custom-weather {
   border-radius: 16px;
-  color: @color3;
+  color: @color6;
 }
 
 #custom-weather.severe {
@@ -239,3 +233,4 @@ window#waybar {
 #custom-weather.default {
   color: #dbd9d8;
 }
+

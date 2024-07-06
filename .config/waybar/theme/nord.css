@@ -1,7 +1,6 @@
-
-@define-color backgroundclr #2E3440;
-@define-color borderclr #3B4252;
-@define-color textclr #434C5E;
-@define-color accentclr #4C566A;
-@define-color highlightclr #D8DEE9;
-@define-color secondarytextclr #E5E9F0;
+@define-color color1 #2E3440;
+@define-color color2 #3B4252;
+@define-color color3 #434C5E;
+@define-color color4 #4C566A;
+@define-color color5 #D8DEE9;
+@define-color color6 #E5E9F0;
