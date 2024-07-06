@@ -50,7 +50,7 @@ To use this configuration, follow these steps:
 
 
 
-Keybindings
+## Keybindings
 
 Here are some of the keybindings defined in the configuration:
 
@@ -66,10 +66,14 @@ Here are some of the keybindings defined in the configuration:
     SuperAlt + (1-0): Workspaces 11-20 monitor 2
 
 
-Credits
+## Credits
+### Başlangıç olarak burdan çok fazla yararlandım global olması için ingilizce yazdım repoyu ama teşekkürümü Türkçe yapmalıyım. Dil değiştirmek istersenizde input.conf içerisinden değiştireblirsiniz.
+### "I have benefited a lot from here as a starting point, so I wrote the repo in English to make it more global, but I should express my gratitude in Turkish. If you want to change the language, you can do so from the input.conf file."
 
-    Hyprland
-    Waybar
-    Rofi
+https://github.com/yusufipk/hyprconf
+
+Hyprland
+Waybar
+Rofi
 
 Feel free to customize and extend the configuration to suit your needs. If you encounter any issues or have suggestions, please open an issue on this repository.
