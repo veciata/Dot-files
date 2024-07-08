@@ -1,4 +1,4 @@
-@import url("/home/veciata/.config/waybar/theme/tokyonight.css");
+@import url("/home/veciata/.config/waybar/theme/mycolors.css");
 
 * {
   border: none;
@@ -11,8 +11,8 @@
 
 window#waybar {
   background: @color1;
-  border-bottom: 1px solid @color5;
-  color: @color6;
+  border-bottom: 1px solid @color6;
+  color: @color5;
 }
 
 #workspaces {
@@ -20,7 +20,7 @@ window#waybar {
   margin: 3px;
   padding: 0px 5px;
   border-radius: 16px;
-  border: solid 0px @color6;
+  border: solid 0px @color5;
   font-weight: normal;
   font-style: normal;
 }
@@ -32,14 +32,14 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: @color6;
+  color: @color5;
   background-color: transparent;
   border-radius: 16px;
 }
 
 #workspaces button:hover {
   background-color: @color3;
-  color: black;
+  color: @color5;
   border-radius: 16px;
 }
 
@@ -64,7 +64,7 @@ window#waybar {
   padding: 5px 8px;
   margin: 3px;
   border-radius: 8px;
-  border: solid 0px @color6;
+  border: solid 0px @color5;
 }
 
 
@@ -114,13 +114,13 @@ window#waybar {
 }
 
 #network {
-  color: @color6;
+  color: @color5;
   border-radius: 8px;
   margin-right: 3px;
 }
 
 #pulseaudio {
-  color: @color6;
+  color: @color5;
   border-radius: 8px;
   margin-left: 0px;
 }
@@ -133,7 +133,7 @@ window#waybar {
 }
 
 #custom-randwall {
-  color: @color6;
+  color: @color5;
   border-radius: 8px;
   margin-right: 0px;
 }
@@ -157,7 +157,7 @@ window#waybar {
 
 #custom-playerctl {
   background: @color2;
-  color: @color6;
+  color: @color5;
   padding-left: 15px;
   padding-right: 14px;
   border-radius: 16px;
@@ -171,7 +171,7 @@ window#waybar {
 
 #custom-playerlabel {
   background: transparent;
-  color: @color6;
+  color: @color5;
   padding-left: 10px;
   padding-right: 15px;
   border-radius: 16px;
@@ -204,7 +204,7 @@ window#waybar {
 
 #custom-weather {
   border-radius: 16px;
-  color: @color6;
+  color: @color5;
 }
 
 #custom-weather.severe {

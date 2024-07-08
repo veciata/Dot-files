@@ -1,6 +1,14 @@
-@define-color backgroundclr #24283b;
-@define-color borderclr #f4d9e1;
-@define-color textclr #282828;
-@define-color accentclr #e6b9c6;
-@define-color highlightclr #9ece6a;
-@define-color secondarytextclr #d3869b;
+@define-color color1 #282828;
+@define-color color2 #24283b;
+@define-color color3 #3d550c;
+@define-color color4 #81b622;
+@define-color color5 #ecf87f;
+@define-color color6 #59981a;
+/* 
+color1 bg color 
+color2 item bg color
+color3 item hover bg color
+color4  text color
+color5 second text color
+color6 line color 
+ */ 

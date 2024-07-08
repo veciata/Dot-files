@@ -13,7 +13,8 @@
     "custom/playerlabel"
   ],
   "modules-center": [
-  "mpd" 
+  "cpu",
+"memory"
   ],
   "modules-right": [
     "tray",
@@ -210,7 +211,7 @@
   },
   "memory": {
     "format": "󰍛 {}%",
-    "format-alt": "󰍛 {used}/{total} GiB",
+    "format-alt": "󰍛 {used}/{avail} GiB",
     "interval": 5
   },
   "cpu": {

@@ -1,7 +1,7 @@
-@define-color color1 rgba(0, 0, 0, 1.0);
-@define-color color2 rgba(2, 10, 20, 1.0);
-@define-color color3 rgba(34, 88, 240, 1.0);
-@define-color color4 rgba(0, 187, 238, 1.0);
-@define-color color5 rgba(0, 204, 255, 1.0);
-@define-color color6 rgba(130, 230, 255, 1.0);
+@define-color color1 #000000; /* bg color */
+@define-color color2 #020a14; /* item bg color */
+@define-color color3 #2258f0; /* item hover bg color */
+@define-color color4 #00bbee; /* text color */
+@define-color color5 #82e6ff; /* second text color */
+@define-color color6 #00ccff; /* line color */
 
