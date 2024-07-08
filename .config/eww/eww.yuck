@@ -1,63 +1,32 @@
-(defwidget bar []
-  (centerbox :orientation "h"
-    (workspaces)
-    (music)
-    (sidestuff)))
+(defvar     bluetooth       "{}")
+(defvar     network         "{}")
+(defvar     media           "{}")
+(defvar     media_positions "{}")
+(defvar     battery         "{}")
+(defvar     notifications   "{}")
+(defvar     apps            "{}")
 
-(defwidget sidestuff []
-  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end"
-  
-    time))
+(deflisten  window      `scripts/hyprland window`)
+(deflisten  workspaces  `scripts/hyprland workspaces`)
 
-(defwidget workspaces []
-  (box :class "workspaces"
-       :orientation "h"
-       :space-evenly true
-       :halign "start"
-       :spacing 10
-    (button :onclick "wmctrl -s 0" 1)
-    (button :onclick "wmctrl -s 1" 2)
-    (button :onclick "wmctrl -s 2" 3)
-))
+(defpoll    volume      :interval "3s" :initial "{}" `scripts/volume get`)
+(defpoll    theme       :interval "3s" :initial "{}" `scripts/theme get`)
+(defpoll    power       :interval "3s" :initial "{}" `scripts/power get`)
+(defpoll    night_light :interval "3s" :initial "{}" `scripts/night_light get`)
+(defpoll    brightness  :interval "3s" :initial "{}" `scripts/brightness get`)
 
-(defwidget music []
-  (box :class "music"
-       :orientation "h"
-       :space-evenly false
-       :halign "center"
-    {music != "" ? "🎵${music}" : ""}))
+(deflisten  events      :initial "[]" `scripts/events get`)
+(defpoll    weather     :interval "3m" :initial "[]" `scripts/weather`)
 
+(defpoll    panel_clock :interval "5s" `date "+%H:%M  |  %b. %d. %A"`)
+(defpoll    hour        :interval "5s" `date "+%H"`)
+(defpoll    minutes     :interval "5s" `date "+%M"`)
+(defpoll    date        :interval "5s" `date "+%b. %d. %A"`)
+(defpoll    uptime      :interval "60s" "uptime | awk '{print $3}' | tr ',' ' '")
 
-(defwidget metric [label value onchange]
-  (box :orientation "h"
-       :class "metric"
-       :space-evenly false
-    (box :class "label" label)
-    (scale :min 0
-           :max 101
-           :active {onchange != ""}
-           :value value
-           :onchange onchange)))
+(defvar real_name "Demeter")
+(defvar user_name "@Aylur")
 
-
-
-(deflisten music :initial ""
-  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
-
-(defpoll volume :interval "1s"
-  "scripts/getvol")
-
-(defpoll time :interval "10s"
-  "date '+%H:%M %b %d, %Y'")
-
-(defwindow bar
-  :monitor 0
-  :stacking "fg";
-  :exclusive true;
-  :geometry (geometry :x "0%"
-                      :y "0%"
-                      :width "100%"
-                      :height "5%"
-                      :anchor "top center")
-  :reserve (struts :side "top" :distance "4%")
-  (bar))
+(include "./yuck/widgets.yuck")
+(include "./yuck/windows.yuck")
+(include "./setups/leftbar.yuck")

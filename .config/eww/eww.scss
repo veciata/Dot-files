@@ -1,55 +1,27 @@
-* {
-  all: unset; //Unsets everything so you can style everything from scratch
-}
+@import "./scss/colors.scss";
+@import "./scss/variables.scss";
+@import "./scss/common.scss";
 
-//Global Styles
-.bar {
-  background-color: #3a3a3a;
-  color: #b0b4bc;
-  padding: 10px;
-}
+@import "./scss/widgets/sys_sliders.scss";
+@import "./scss/widgets/notification.scss";
+@import "./scss/widgets/toggle_button.scss";
+@import "./scss/widgets/media.scss";
+@import "./scss/widgets/calendar.scss";
+@import "./scss/widgets/bar_widget.scss";
+@import "./scss/widgets/user.scss";
+@import "./scss/widgets/events.scss";
+@import "./scss/widgets/weather.scss";
 
-// Styles on classes (see eww.yuck for more information)
-
-.sidestuff slider {
-  all: unset;
-  color: #ffd5cd;
-}
-
-.metric scale trough highlight {
-  all: unset;
-  background-color: #D35D6E;
-  color: #000000;
-  border-radius: 10px;
-}
-.metric scale trough {
-  all: unset;
-  background-color: #4e4e4e;
-  border-radius: 50px;
-  min-height: 3px;
-  min-width: 50px;
-  margin-left: 10px;
-  margin-right: 20px;
-}
-.metric scale trough highlight {
-  all: unset;
-  background-color: #D35D6E;
-  color: #000000;
-  border-radius: 10px;
-}
-.metric scale trough {
-  all: unset;
-  background-color: #4e4e4e;
-  border-radius: 50px;
-  min-height: 3px;
-  min-width: 50px;
-  margin-left: 10px;
-  margin-right: 20px;
-}
-.label-ram {
-  font-size: large;
-}
-.workspaces button:hover {
-  color: #D35D6E;
-}
-
+@import "./scss/windows/hbar.scss";
+@import "./scss/windows/vbar.scss";
+@import "./scss/windows/datemenu.scss";
+@import "./scss/windows/quicksettings.scss";
+@import "./scss/windows/powermenu.scss";
+@import "./scss/windows/desktop.scss";
+@import "./scss/windows/osd.scss";
+@import "./scss/windows/dock.scss";
+@import "./scss/windows/notifications.scss";
+@import "./scss/windows/noti_center.scss";
+@import "./scss/windows/media.scss";
+@import "./scss/windows/app_laucher.scss";
+tooltip{ @include tooltip }
