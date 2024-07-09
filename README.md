@@ -17,6 +17,8 @@ Welcome to my arch based Hyprland configuration repository! This setup is optimi
 ![Main](Screenshots/screenshot.png)
 
 ![Main](Screenshots/Screenshot3.png)
+
+![Main](Screenshots/Screenshot4.png)
 ## Introduction
 This repository contains my personal configuration files for [Hyprland](https://github.com/hyprwm/Hyprland), a dynamic tiling Wayland compositor. The configuration is tailored for a two-monitor setup and includes settings for various applications and utilities to enhance productivity.
 

@@ -1,4 +1,4 @@
-@import url("/home/veciata/.config/waybar/theme/mycolors.css");
+@import url("/home/veciata/.config/waybar/theme/redblue.css");
 
 * {
   border: none;
@@ -11,7 +11,7 @@
 
 window#waybar {
   background: @color1;
-  border-bottom: 1px solid @color6;
+  border-bottom: 2px solid @color6;
   color: @color5;
 }
 
