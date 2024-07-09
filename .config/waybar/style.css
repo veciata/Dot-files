@@ -17,9 +17,9 @@ window#waybar {
 
 #workspaces {
   background: @color2;
-  margin: 3px;
-  padding: 0px 5px;
-  border-radius: 16px;
+  margin: 2px 4px 5px 0px;
+  padding: 0px 2px;
+  border-radius: 0px 0px 24px 0px;
   border: solid 0px @color5;
   font-weight: normal;
   font-style: normal;
@@ -58,13 +58,13 @@ window#waybar {
 #pulseaudio,
 #network,
 #custom-randwall,
+#backlight ,
 #custom-updates,
 #custom-launcher {
   background: @color2;
-  padding: 5px 8px;
-  margin: 3px;
+  padding: 2px 4px;
+  margin: 1px 3px 5px 3px;
   border-radius: 8px;
-  border: solid 0px @color5;
 }
 
 
@@ -80,15 +80,13 @@ window#waybar {
 }
 
 #custom-clock {
-  color: @color4;
-  background-color: @color2;
   border-radius: 0px 0px 0px 24px;
   padding-left: 13px;
   padding-right: 15px;
   margin-right: 0px;
   margin-left: 10px;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 4px;
   font-weight: bold;
 }
 
@@ -106,12 +104,6 @@ window#waybar {
   border-radius: 5px;
 }
 
-#backlight {
-  background-color: @color2;
-  border-radius: 16px;
-  margin: 3px;
-  padding: 0px 10px;
-}
 
 #network {
   color: @color5;

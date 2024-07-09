@@ -17,6 +17,7 @@
 "memory"
   ],
   "modules-right": [
+    "custom/wf-recorder",
     "tray",
     "custom/updates",
     "custom/prayer",
