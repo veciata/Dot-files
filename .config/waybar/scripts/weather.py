@@ -1,4 +1,4 @@
-#!/home/veciata/.pyvenv/bin/python python
+#!~/.pyvenv/bin/python python
 
 import subprocess
 from pyquery import PyQuery  # install using `pip install pyquery`
