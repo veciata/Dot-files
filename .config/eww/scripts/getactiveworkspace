@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ACTIVE=$(hyprctl activeworkspace | awk '/workspace/ {print $3}' 2> /dev/null)
+
+echo "$ACTIVE"

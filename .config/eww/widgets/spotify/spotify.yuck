@@ -1,0 +1,25 @@
+(defpoll ARTIST :interval "1s" "./scripts/getmusicinfo --artist")
+(defpoll COVER :interval "1s" "./scripts/getmusicinfo --cover")
+(defpoll SPOTIFYTIME :interval "1s" "./scripts/getmusicinfo --time")
+
+(defwidget spotify []
+  (box :class "spotify-widget" :orientation "v" :space-evenly false
+    (box :class "spotify-meta" :orientation "h" :space-evenly false :halign "center"
+      (box :class "spotify-art" :style "background-image: url('${COVER}')")
+      (box :class "spotify-info" :orientation "v" :space-evenly false :valign "center" :halign "start"
+        (label :class "spotify-title" :text SONG)
+        (label :class "spotify-artist" :text ARTIST)
+        )
+      )
+    (box :class "spotify-controls" :orientation "h" :space-evenly false :halign "center"
+      (button :class "spotify-button" :onclick "playerctl -p spotify previous" "󰙣")
+      (button :class "spotify-button"
+              :class "spotify-button spotify-play"
+              :onclick {(PLAYING == "Playing" ? "playerctl -p spotify pause" : (PLAYING == "Paused" ? "playerctl -p spotify play" : ""))}
+        (label :text {(PLAYING == "Playing" ? "󰏥" : (PLAYING == "Paused" ? "󰐌" : "󰙦"))})
+        )
+      (button :class "spotify-button" :onclick "playerctl -p spotify next" "󰙡")
+      )
+    (progress :class "spotify-prog-bar" :orientation "h" :hexpand true :halign "fill" :value SPOTIFYTIME)
+    )
+  )

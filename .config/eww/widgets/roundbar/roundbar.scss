@@ -1,0 +1,162 @@
+@import "./../../themes/catppuccin.scss";
+$font-size: 16px;
+
+* {
+  all: unset;
+  font-family: GeistMono NF;
+  font-weight: Bold;
+}
+
+.body {
+  background: linear-gradient(
+    0deg,
+    lighten($base, 0%) 0%,
+    lighten($base, 4%) 100%
+  );
+  border-radius: 10px;
+  margin: 8px 8px 0px 8px;
+}
+
+.checkbutton {
+  padding-right: 25px;
+  font-size: 20px;
+  color: $accent;
+  transition: all 0.25s;
+}
+
+.checkbutton check {
+  color: transparent;
+}
+
+.checkbutton:checked {
+  color: $glow;
+  text-shadow: 0 0 5px $accent;
+}
+
+.checkbutton check label:hover {
+  color: $accent;
+}
+
+.modules {
+  border-radius: 20px 0px 0px 20px;
+  padding-left: 20px;
+  color: $text;
+  font-size: $font-size;
+}
+
+.modules .spacer {
+  color: shade($text, 1);
+}
+
+.metric scale trough highlight {
+  background: $accent;
+  border-radius: 10px;
+  transition: all 0.25s;
+}
+
+.metric scale trough highlight:hover {
+  background: $glow;
+  box-shadow: 0px 0px 7px $accent;
+}
+
+.metric scale trough {
+  background: lighten($black, 0%);
+  border-radius: 50px;
+  min-height: 8px;
+  min-width: 70px;
+}
+
+.metric scale {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.close-button {
+  color: $accent;
+  padding-right: 20px;
+  transition: all 0.25s;
+}
+
+.close-button:hover {
+  color: $glow;
+  text-shadow: 0px 0px 5px $accent;
+}
+
+.music-controls {
+  // margin: 10px 0;
+  padding: 0 20px;
+  color: $text;
+}
+.spotify {
+  font-size: $font-size * 1.75;
+  padding: 0 0px 0 8px;
+  animation-name: pulse;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.spotify-off {
+  font-size: $font-size * 2;
+  padding: 0 0px 0 8px;
+  color: shade($text, 0.7);
+}
+
+.music-buttons {
+  padding: 0 20px 0 0px;
+  font-size: $font-size * 2;
+  transition: all 0.25s;
+}
+
+.music-button {
+  transition: all 0.25s;
+}
+
+.music-button:hover {
+  color: lighten($altglow, 10%);
+  text-shadow: 0px 5px 5px $base;
+}
+
+.play-button {
+  padding: 0 8px 0 8px;
+}
+
+.workspaces {
+  color: $text;
+  padding-left: 10px;
+}
+
+.workspaces button {
+  padding: 0px 10px;
+  transition: all 0.25s;
+  font-size: $font-size * 1.5;
+  color: $text;
+}
+
+.workspaces button:hover {
+  text-shadow: 0px 0px 7px $alt;
+  color: $altglow;
+}
+
+.workspaces .active {
+  color: $text;
+}
+
+@keyframes pulse {
+  0% {
+    color: $text;
+    text-shadow: 0px 0px 0px $accent;
+  }
+  85% {
+    color: $text;
+    text-shadow: 0px 0px 0px $accent;
+  }
+  90% {
+    color: $glow;
+    text-shadow: 0px 0px 10px $accent;
+  }
+  100% {
+    color: $text;
+    text-shadow: 0px 0px 0px $accent;
+  }
+}

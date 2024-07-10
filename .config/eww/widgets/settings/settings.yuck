@@ -1,0 +1,61 @@
+(defpoll DATE :interval "60s" `date +'%a, %d %b %Y'`)
+
+(defwidget settings []
+  (box :class "settings-window" :orientation "v" :space-evenly false
+    (settings-row1)
+    ;; (spacer-line)
+    (spotify)
+    ;; (spacer-line)
+    (settings-row2)
+    )
+  )
+
+(defwidget settings-row1 []
+  (box :class "settings-row row1" :orientation "h" :halign "center"
+    (datetime)
+    (settings-sliders)
+    )
+  )
+
+(defwidget settings-row2 []
+  (box :class "settings-row row2" :orientation "h" :halign "center"
+    (button :class "power-button" :onclick "shutdown now" "")
+    (button :class "power-button" :onclick "reboot" "")
+    (button :class "power-button sleep-button" :onclick "systemctl suspend" "")
+    )
+  )
+
+(defwidget datetime []
+  (box :class "datetime" :orientation "v" :space-evenly false
+    (clock)
+    (date)
+    )
+  )
+
+(defwidget settings-sliders []
+  (box :class "settings-sliders" :orientation "v" :space-evenly false :valign "center":halign "center"
+    (settings-slider :icon "" :value {replace(VOLUME, '\%', '')} :onchange "amixer sset Master {}%")
+    (settings-slider :icon "" :value 90 :onchange "echo 'brightness'")
+    (settings-slider :icon "" :value 50 :onchange "echo 'brightness'")
+    )
+  )
+
+(defwidget settings-slider [icon value onchange]
+  (box :class "settings-slider" :orientation "h" :space-evenly false :halign "center"
+    (label :text icon)
+    (scale :class "settings-slider"
+           :min 0.0
+           :max 100.0
+           :orientation "h"
+           :value value
+           :onchange onchange
+      )
+    (label :text value)
+    )
+  )
+
+(defwidget spacer-line []
+  (box :class "spacer-line")
+  )
+
+(defwidget date [] (box :class "date" DATE))

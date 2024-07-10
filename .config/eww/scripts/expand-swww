@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+TEMP=/tmp/current_wall
+
+files=(~/Pictures/Wallpapers/Abstract/*)
+
+eww=~/.config/eww
+scripts=$eww/scripts
+
+cooldown=0.1
+
+index=$(cat $TEMP)
+index=$((index+1))
+if [ $index -ge ${#files[@]} ]; then
+  index=0
+fi
+echo $index > $TEMP
+$scripts/change-wallpaper "${files[$index]}"
+exit 0
+sleep $cooldown

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+WORKSPACES=$(hyprctl workspaces | awk '/workspace/ {print $3}' 2> /dev/null)
+
+declare -a ACTIVE_LIST=()
+WSP=(0 0 0 0 0 0)
+
+for i in "$WORKSPACES"; do
+  ACTIVE_LIST+=($i)
+done
+
+for value in ${ACTIVE_LIST[@]}; do
+  WSP[$((value-1))]=1
+done
+
+echo '{"0": '${WSP[0]}',"1": '${WSP[1]}',"2": '${WSP[2]}',"3": '${WSP[3]}',"4": '${WSP[4]}',"5": '${WSP[5]}'}' | jq .

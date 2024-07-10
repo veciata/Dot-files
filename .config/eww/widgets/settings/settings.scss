@@ -1,0 +1,105 @@
+.settings-window {
+  background: linear-gradient(45deg, lighten($base, 0%) 0%, lighten($base, 5%) 100%);
+  padding: 10px 0px;
+  border-radius: 10px;
+  border: 2px solid $accent;
+  // box-shadow: inset 0px 10px 10px $black;
+}
+
+.datetime .clock {
+  font-size: 50px;
+  color: $alt;
+  animation-name: pulsecolor;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.row1 {
+  padding-bottom: 20px;
+}
+
+.row2 {
+  background: lighten($grey, 0%);
+  margin: 10px 5px;
+  // border: 2px solid $alt;
+  border-radius: 10px;
+  // border-top: 4px solid $base;
+  padding: 3px 10px;
+}
+
+.power-button {
+  background: $base;
+  color: $text;
+  font-size: 30px;
+  padding: 5px 20px 5px 12px;
+  margin: 20px 10px;
+  border-radius: 5px;
+  transition: all 0.25s;
+}
+
+.power-button:hover {
+  background: lighten($base, 1%);
+  color: lighten($glow, 10%);
+  text-shadow: 0px 0px 5px $alt;
+  box-shadow: 0px 7px 5px shade($base, 0.7);
+}
+
+.sleep-button {
+  padding: 5px 20px 5px 15px;
+}
+
+.settings-slider {
+  padding: 5px 10px;
+}
+
+.settings-slider scale trough highlight {
+  background: $accent;
+  border-radius: 10px;
+  transition: all 0.25s;
+}
+
+.settings-slider scale trough highlight:hover {
+  background: $glow;
+  box-shadow: 0px 0px 7px $accent;
+}
+
+.settings-slider scale trough {
+  background: $base;
+  border-radius: 50px;
+  min-height: 8px;
+  min-width: 100px;
+}
+
+.settings-slider scale {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.spacer-line {
+  margin: 0px 100px;
+  border: 2px solid $glow;
+  box-shadow: 0px 0px 5px $accent;
+  border-radius: 2px;
+}
+
+@keyframes pulsecolor {
+0% {
+  color: $alt;
+  // text-shadow: 0px 0px 0px $accent;
+}
+80% {
+
+  color: $alt;
+  text-shadow: 0px 0px 0px $base;
+}
+90% {
+  color: $glow;
+  text-shadow: 0px 0px 7px $accent;
+}
+100% {
+  color: $alt;
+  // text-shadow: 0px 0px 0px $accent;
+}
+}
+

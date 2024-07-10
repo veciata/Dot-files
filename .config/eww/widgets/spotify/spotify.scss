@@ -1,0 +1,91 @@
+$font-size: 16px;
+
+* {
+  all: unset;
+  font-family: GeistMono NF;
+}
+
+.spotify-widget {
+  background: lighten($grey, 0%);
+  margin: 5px 20px;
+  // border: 2px solid $alt;
+  border-radius: 10px;
+}
+
+.spotify-meta {
+  padding: 20px 20px
+}
+
+.spotify-art {
+  border-radius: 5px;
+  background-size: cover;
+  min-width: 100px;
+  min-height: 100px;
+  box-shadow: 0px 7px 10px shade($base, 0.7);
+}
+
+.spotify-info {
+  padding-left: 10px;
+  font-size: $font-size;
+}
+
+.spotify-title {
+  color: $alt;
+}
+
+.spotify-artist {
+  color: $text;
+}
+
+.spotify-controls {
+  font-size: $font-size*2.5;
+}
+
+.spotify-button {
+  color: $alt;
+  transition: all 0.25s;
+}
+
+.spotify-button:hover {
+  color: $glow;
+  text-shadow: 0px 7px 5px $base;
+}
+
+.spotify-play {
+  padding:0 20px 0 20px;
+}
+
+.spotify-prog-bar {
+  padding: 20px;
+}
+
+.spotify-prog-bar trough {
+  min-height: 8px;
+  background: $base;
+  border-radius: 10px;
+}
+
+.spotify-prog-bar trough progress {
+  background: $accent;
+  min-height: 8px;
+  border-radius: 10px;
+}
+
+.spotify-check {
+  color: transparent;
+  padding-right: 16px;
+}
+
+.spotify-check label {
+  color: $text;
+  transition: all 0.25s;
+}
+
+.spotify-check:hover label {
+  color: $glow;
+  text-shadow: 0px 0px 7px $accent;
+}
+
+.spotify-check:checked label {
+  color: $accent;
+}

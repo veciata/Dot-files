@@ -1,0 +1,115 @@
+(defpoll TIME :interval "5s" `date +'%H:%M'`)
+(defpoll VOLUME :interval "1s" "./scripts/getvol")
+
+(defpoll PLAYING :interval "1s" "./scripts/getmusicinfo --status")
+(defpoll SONG :interval "1s" "./scripts/getmusicinfo --song")
+
+(defpoll WORKSPACES :interval "1s" "./scripts/getworkspaces")
+(defpoll ACTIVEWORKSPACE :interval "1s" "./scripts/getactiveworkspace")
+
+(defvar music_reveal false)
+
+(defwidget roundbar []
+  (centerbox :orientation "h" :class "body"
+    (workspaces)
+    (middle)
+    (modules)
+  )
+)
+
+(defwidget workspaces []
+  (box :class "workspaces" :orientation "h" :halign "start"
+    (button
+      :class {WORKSPACES[0]==1 ? "active" : ""}
+      :onclick "hyprctl dispatch workspace 1" {ACTIVEWORKSPACE==1 ? "" : ""}
+    )
+    (button
+      :class {WORKSPACES[1]==1 ? "active" : ""}
+      :onclick "hyprctl dispatch workspace 2" {ACTIVEWORKSPACE==2 ? "" : ""}
+    )
+    (button
+      :class {WORKSPACES[2]==1 ? "active" : ""}
+      :onclick "hyprctl dispatch workspace 3" {ACTIVEWORKSPACE==3 ? "" : ""}
+    )
+    (button 
+      :class {WORKSPACES[3]==1 ? "active" : ""}
+      :onclick "hyprctl dispatch workspace 4" {ACTIVEWORKSPACE==4 ? "" : ""}
+    )
+    (button 
+      :class {WORKSPACES[4]==1 ? "active" : ""}
+      :onclick "hyprctl dispatch workspace 5" {ACTIVEWORKSPACE==5 ? "" : ""}
+    )
+    (button 
+      :class {WORKSPACES[5]==1 ? "active" : ""}
+      :onclick "hyprctl dispatch workspace 6" {ACTIVEWORKSPACE==6 ? "" : ""}
+
+    )
+  )
+)
+
+(defwidget middle []
+  (eventbox :onhover "eww update music_reveal=true"
+            :onhoverlost "eww update music_reveal=false"
+    (box :class "music-controls"
+         :orientation "h"
+         :space-evenly "false"
+      (revealer :reveal music_reveal
+                :transition "slideright"
+                :duration "250ms"
+        (box :class "music-buttons"
+          (button :class "music-button" :onclick "playerctl previous" "󰙣")
+          (button :class "music-button play-button"
+                  :onclick {(PLAYING == "Playing" ? "playerctl -p spotify pause" : (PLAYING == "Paused" ? "playerctl -p spotify play" : ""))}
+            (label :text {(PLAYING == "Playing" ? "󰏥" : (PLAYING == "Paused" ? "󰐌" : "󰙦"))}))
+          (button :class "music-button" :onclick "playerctl next" "󰙡")
+        )
+      )
+      (label :class {(PLAYING == "Playing" || PLAYING == "Paused" ? "spotify" : "spotify-off")} :text " ")
+      (button :class "song"
+              :onclick {(PLAYING == "Playing" ? "playerctl -p spotify pause" : (PLAYING == "Paused" ? "playerctl -p spotify play" : ""))}
+      (label :text SONG))
+    )
+  )
+)
+
+(defwidget modules []
+  (box :orientation "h" :halign "end" :class "modules" :space-evenly false :spacing 20
+    (metric
+      :label ""
+      :value {replace(VOLUME, '\%', '')}
+      :onchange "amixer sset Master {}%"
+    )
+    (spacer)
+    (cpu)
+    (ram)
+    (spacer)
+    (clock)
+    (wallpaper)
+    (gear)
+  )
+)
+
+(defwidget metric [label value onchange]
+  (box
+    :orientation "h"
+    :class "metric"
+    :space-evenly false
+    (box :class "label" label)
+    (scale
+      :round-digits 0
+      :min 0
+      :max 101
+      :active {onchange != ""}
+      :value value
+      :onchange onchange
+      )
+    (box :class "label" value)
+    )
+)
+
+(defwidget wallpaper [] (button :class "wallpaper" :onclick "./scripts/expand-swww" ""))
+(defwidget spacer [] (box :class "spacer" "|"))
+(defwidget clock [] (box :class "clock" TIME))
+(defwidget cpu [] (box :class "label" {round(EWW_CPU.avg, 0)+'% '}))
+(defwidget ram [] (box :class "label" {" "+" "+round(EWW_RAM.used_mem_perc, 0)+'%'}))
+(defwidget gear [] (checkbox :class "checkbutton" :onchecked "eww open settings" :onunchecked "eww close settings" ""))

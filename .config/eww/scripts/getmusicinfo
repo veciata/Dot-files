@@ -1,0 +1,51 @@
+#!/bin/sh
+
+STATUS=$(playerctl status -p spotify 2> /dev/null)
+
+get_status() {
+  echo "$STATUS"
+}
+
+get_song() {
+  if [[ "$STATUS" == "Playing" || "$STATUS" == "Paused" ]]; then
+    echo "$(playerctl -p spotify metadata | awk '/title/ {for (i=3;i<NF;i++) printf $i " "; print $NF}')"
+  else
+    echo ""
+  fi
+}
+
+get_artist() {
+  if [[ "$STATUS" == "Playing" || "$STATUS" == "Paused" ]]; then
+    echo "$(playerctl -p spotify metadata | awk '/artist/ {for (i=3;i<NF;i++) printf $i " "; print $NF}')"
+  else
+    echo ""
+  fi
+}
+
+get_time() {
+  length=$(playerctl -p spotify metadata | awk '/length/ {print $3}')
+  pos=$(playerctl -p spotify position)
+  pos=${pos%.*} # convert to integer
+  pos=$((pos * 1000000)) # convert to us
+  relative=$(printf "%.2f" $((10**4*$pos/$length))e-2) # calculate percentage
+
+  echo "$relative"
+}
+
+get_cover() {
+  ART=$(playerctl -p spotify metadata | awk '/artUrl/ {print $3}' 2> /dev/null)
+  # $(wget $ART -O current.jpg)
+  echo "$ART"
+}
+
+if [[ "$1" == "--status" ]]; then
+  get_status
+elif [[ "$1" == "--song" ]]; then
+  get_song
+elif [[ "$1" == "--artist" ]]; then
+  get_artist
+elif [[ "$1" == "--time" ]]; then
+  get_time
+elif [[ "$1" == "--cover" ]]; then
+  get_cover
+fi 

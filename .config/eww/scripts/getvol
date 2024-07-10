@@ -1,0 +1,4 @@
+#!/bin/sh
+
+VOLUME=$(amixer sget Master | awk -F"[][]" '/Left:/ {print $2}')
+echo "$VOLUME"

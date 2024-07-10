@@ -1,0 +1,61 @@
+(include "./widgets/roundbar/roundbar.yuck")
+(include "./widgets/settings/settings.yuck")
+(include "./widgets/spotify/spotify.yuck")
+
+(defwindow roundbar
+  :monitor 0
+  :geometry (geometry
+  :x "0%"
+  :y "0px"
+  :width "100%"
+  :anchor "top center"
+  )
+  :windowtype "dock"
+  :stacking "bottom"
+  :exclusive true
+  (roundbar)
+)
+
+(defwindow settings
+  :monitor 0
+  :geometry (geometry
+  :x "8px"
+  :y "8px"
+  :width "20%"
+  :anchor "top right"
+  )
+  :windowtype "normal"
+  :stacking "fg"
+  :exclusive false
+  (settings)
+)
+
+(defwindow powermenu
+  :monitor 0
+  :geometry (geometry
+  :x "10%"
+  :y "10%"
+  :width "10px"
+  :height "10px"
+  :anchor "top left"
+  )
+  :windowtype "normal"
+  :stacking "fg"
+  :exclusive false
+  (powermenu)
+)
+
+(defwindow spotify
+  :monitor 0
+  :geometry (geometry
+  :x "0%"
+  :y "10%"
+  :width "250px"
+  :height "50px"
+  :anchor "top center"
+  )
+  :windowtype "normal"
+  :stacking "fg"
+  :exclusive false
+  (spotify)
+)
