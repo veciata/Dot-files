@@ -18,7 +18,8 @@ window#waybar {
 #workspaces {
   background: @color2;
   margin: 2px 4px 5px 0px;
-  padding: 0px 2px;
+  padding-left: 13px;
+  padding-right: 15px;
   border-radius: 0px 0px 24px 0px;
   border: solid 0px @color5;
   font-weight: normal;

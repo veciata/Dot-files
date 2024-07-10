@@ -20,7 +20,6 @@
     "custom/wf-recorder",
     "tray",
     "custom/updates",
-    "custom/prayer",
     "network",
     "bluetooth",
     "pulseaudio",
@@ -94,11 +93,6 @@
     "format-connected":"󰂱 ",
     "on-click-right": "blueberry",
     "tooltip-format": "{status}"
-  },
-  "custom/prayer": {
-    "exec": "~/.config/waybar/scripts/prayer_time.sh",
-    "interval": 60,
-    "format": "{}"
   },
   "clock": {
     "format": "  󰀢 {:%H:%M}",
