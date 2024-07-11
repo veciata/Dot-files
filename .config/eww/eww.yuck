@@ -30,20 +30,7 @@
   (settings)
 )
 
-(defwindow powermenu
-  :monitor 0
-  :geometry (geometry
-  :x "10%"
-  :y "10%"
-  :width "10px"
-  :height "10px"
-  :anchor "top left"
-  )
-  :windowtype "normal"
-  :stacking "fg"
-  :exclusive false
-  (powermenu)
-)
+
 
 (defwindow spotify
   :monitor 0
