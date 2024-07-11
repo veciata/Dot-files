@@ -1,0 +1,12 @@
+(defpoll TIME :interval "5s" `date +'%H:%M'`)
+(defpoll VOLUME :interval "1s" "./scripts/getvol")
+
+(defpoll PLAYING :interval "1s" "./scripts/getmusicinfo --status")
+(defpoll SONG :interval "1s" "./scripts/getmusicinfo --song")
+
+(defpoll WORKSPACES :interval "1s" "./scripts/getworkspaces")
+(defpoll ACTIVEWORKSPACE :interval "1s" "./scripts/getactiveworkspace")
+
+(defvar music_reveal false)
+
+
