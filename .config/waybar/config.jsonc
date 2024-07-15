@@ -168,7 +168,6 @@
     "exec": "~/.pyvenv/bin/python ~/.config/waybar/scripts/weather.py",
     "restart-interval": 300,
     "return-type": "json",
-    "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
     // "format-alt": "{alt}",
   },
   "custom/playerlabel": {
@@ -194,7 +193,7 @@
     "format-charging": "{capacity}% 󰂄 ",
     "format-plugged": "{capacity}% 󰂅  ",
     "format-alt": " {time} {icon}",
-    "format-good": "",
+    "format-good": "{icon}",
     "format-full": "",
     "format-icons": [
       "󰂃",

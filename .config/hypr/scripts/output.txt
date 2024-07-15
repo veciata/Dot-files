@@ -1,0 +1,9 @@
+# Read the extracted text
+TEXT=$(cat "S{TEMP_TEXT}. txt"}
+
+# Copy the extracted text to the clipboard
+echo "S$TEXT" | wl-copy
+
+# Notify the user
+
+notify-send "Screenshot and text copied to clipboard!”

@@ -96,3 +96,10 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 PATH=~/.console-ninja/.bin:$PATH
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export GBM_BACKEND=nvidia-drm
+

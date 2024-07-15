@@ -2,7 +2,7 @@
 
 down() {
   pkexec brillo -u 150000 -U 5
-  brightness=$(light -g)
+  brightness=$(brightnessctl)
   dunstify -a "BRIGHTNESS" "Decreasing to $brightness%" -h int:value:"$brightness" -i display-brightness-symbolic -r 2593 -u normal
 }
 
