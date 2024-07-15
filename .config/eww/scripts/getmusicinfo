@@ -1,51 +1,98 @@
-#!/bin/sh
+#!/bin/bash
+# scripts by adi1090x
 
-STATUS=$(playerctl status -p spotify 2> /dev/null)
+## Get data
+STATUS="$(mpc status)"
+COVER="/tmp/.music_cover.png"
+MUSIC_DIR="$HOME/Music"
 
+## Get status
 get_status() {
-  echo "$STATUS"
+	if [[ $STATUS == *"[playing]"* ]]; then
+		echo ""
+	else
+		echo "奈"
+	fi
 }
 
+## Get song
 get_song() {
-  if [[ "$STATUS" == "Playing" || "$STATUS" == "Paused" ]]; then
-    echo "$(playerctl -p spotify metadata | awk '/title/ {for (i=3;i<NF;i++) printf $i " "; print $NF}')"
-  else
-    echo ""
-  fi
+	song=`mpc -f %title% current`
+	if [[ -z "$song" ]]; then
+		echo "Offline"
+	else
+		echo "$song"
+	fi	
 }
 
+## Get artist
 get_artist() {
-  if [[ "$STATUS" == "Playing" || "$STATUS" == "Paused" ]]; then
-    echo "$(playerctl -p spotify metadata | awk '/artist/ {for (i=3;i<NF;i++) printf $i " "; print $NF}')"
-  else
-    echo ""
-  fi
+	artist=`mpc -f %artist% current`
+	if [[ -z "$artist" ]]; then
+		echo ""
+	else
+		echo "$artist"
+	fi	
 }
 
+## Get time
 get_time() {
-  length=$(playerctl -p spotify metadata | awk '/length/ {print $3}')
-  pos=$(playerctl -p spotify position)
-  pos=${pos%.*} # convert to integer
-  pos=$((pos * 1000000)) # convert to us
-  relative=$(printf "%.2f" $((10**4*$pos/$length))e-2) # calculate percentage
-
-  echo "$relative"
+	time=`mpc status | grep "%)" | awk '{print $4}' | tr -d '(%)'`
+	if [[ -z "$time" ]]; then
+		echo "0"
+	else
+		echo "$time"
+	fi	
+}
+get_ctime() {
+	ctime=`mpc status | grep "#" | awk '{print $3}' | sed 's|/.*||g'`
+	if [[ -z "$ctime" ]]; then
+		echo "0:00"
+	else
+		echo "$ctime"
+	fi	
+}
+get_ttime() {
+	ttime=`mpc -f %time% current`
+	if [[ -z "$ttime" ]]; then
+		echo "0:00"
+	else
+		echo "$ttime"
+	fi	
 }
 
+## Get cover
 get_cover() {
-  ART=$(playerctl -p spotify metadata | awk '/artUrl/ {print $3}' 2> /dev/null)
-  # $(wget $ART -O current.jpg)
-  echo "$ART"
+	ffmpeg -i "${MUSIC_DIR}/$(mpc current -f %file%)" "${COVER}" -y &> /dev/null
+	STATUS=$?
+
+	# Check if the file has a embbeded album art
+	if [ "$STATUS" -eq 0 ];then
+		echo "$COVER"
+	else
+		echo "images/music.png"
+	fi
 }
 
-if [[ "$1" == "--status" ]]; then
-  get_status
-elif [[ "$1" == "--song" ]]; then
-  get_song
+## Execute accordingly
+if [[ "$1" == "--song" ]]; then
+	get_song
 elif [[ "$1" == "--artist" ]]; then
-  get_artist
+	get_artist
+elif [[ "$1" == "--status" ]]; then
+	get_status
 elif [[ "$1" == "--time" ]]; then
-  get_time
+	get_time
+elif [[ "$1" == "--ctime" ]]; then
+	get_ctime
+elif [[ "$1" == "--ttime" ]]; then
+	get_ttime
 elif [[ "$1" == "--cover" ]]; then
-  get_cover
-fi 
+	get_cover
+elif [[ "$1" == "--toggle" ]]; then
+	mpc -q toggle
+elif [[ "$1" == "--next" ]]; then
+	{ mpc -q next; get_cover; }
+elif [[ "$1" == "--prev" ]]; then
+	{ mpc -q prev; get_cover; }
+fi

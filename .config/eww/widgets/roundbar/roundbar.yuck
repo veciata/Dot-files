@@ -7,6 +7,7 @@
     (workspaces)
     (middle)
     (modules)
+    
   )
 )
 
@@ -27,7 +28,7 @@
           (button :class "music-button" :onclick "playerctl next" "󰙡")
         )
       )
-      (label :class {(PLAYING == "Playing" || PLAYING == "Paused" ? "spotify" : "spotify-off")} :text " ")
+      (label :class {(PLAYING == "Playing" || PLAYING == "Paused" ? "spotify" : "spotify-off")} :text " ")
       (button :class "song"
               :onclick {(PLAYING == "Playing" ? "playerctl -p spotify pause" : (PLAYING == "Paused" ? "playerctl -p spotify play" : ""))}
       (label :text SONG))
@@ -37,13 +38,14 @@
 
 (defwidget modules []
   (box :orientation "h" :halign "end" :class "modules" :space-evenly false :spacing 20
+    (system-tray) 
     (metric
       :label ""
       :value {replace(VOLUME, '\%', '')}
       :onchange "pamixer sset Master {}%"
     )
 
-    (clock)
+    (clock-and-date)
     (gear)
   )
 )

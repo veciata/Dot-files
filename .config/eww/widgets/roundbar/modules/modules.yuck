@@ -1,7 +1,17 @@
 
-(defwidget wallpaper [] (button :class "wallpaper" :onclick "./scripts/expand-swww" ""))
 (defwidget spacer [] (box :class "spacer" "|"))
+
+(defwidget clock-and-date[]
+(box :class "clock-and-date" :orientation "v" :halign "right"
+ (clock)
+ (date)
+  )
+)
 (defwidget clock [] (box :class "clock" TIME))
+
+(defwidget date [] (box :class "date" ))
+
 (defwidget cpu [] (box :class "label" {round(EWW_CPU.avg, 0)+'% '}))
 (defwidget ram [] (box :class "label" {" "+" "+round(EWW_RAM.used_mem_perc, 0)+'%'}))
 (defwidget gear [] (checkbox :class "checkbutton" :onchecked "eww open settings" :onunchecked "eww close settings" ""))
+

@@ -1,4 +1,4 @@
-@import "./../../themes/catppuccin.scss";
+@import "./../../themes/ice.scss";
 $font-size: 16px;
 
 * {
@@ -36,6 +36,7 @@ $font-size: 16px;
 .checkbutton check label:hover {
   color: $accent;
 }
+
 
 .modules {
   border-radius: 20px 0px 0px 20px;
