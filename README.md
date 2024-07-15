@@ -38,14 +38,14 @@ To use this configuration, follow these steps:
     cp Dot-files/.zshrc ~/
 3. install nesseserry packages
     ```sh
-   sudo pacman -Syu hyprland waybar rofi zsh alacritty neovim wl-clipboard brightnessctl pavucontrol\
+   sudo pacman -Syu hyprland waybar  zsh alacritty neovim wl-clipboard brightnessctl pavucontrol\
    grim slurp thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
    ttf-firacode-nerd ttf-iosevka-nerd hypridle zoxide exa gsettings-desktop-schemas xfce-polkit thefuck\
    kdeconnect ffmpeg nwg-look pulseaudio zellij pulsemixer btop partitionmanager bluez\
    nvidia-settings nvidia nvidia-utils nvidia-open font-manager ark openssh speedtest-cli\
    thunderbird yazi nm-connection-editor hostapd mpd ncmpcpp mpc qbittorrent ollama calcurse
 
-   yay -S papirus-icon-theme wallock wallock-git bibata-cursor-theme-bin nordic-theme\
+   yay -S papirus-icon-theme rofi-lbonn-wayland-git wallock wallock-git bibata-cursor-theme-bin nordic-theme\
    nordic-darker-theme pipewire-enable-bluez5 silo-trello grimblast-git mpdevil\
    oh-my-posh brillo
     ```
