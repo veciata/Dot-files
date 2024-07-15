@@ -1,8 +1,0 @@
-
-(use "ollama.yuck")
-
-(defpoll ollama_output :interval "never" (eww get ollama_output))
-(defpoll input_text :interval "never" (eww get input_text))
-
-;; Load initial conversation history
-(eww update ollama_output (sh "cat ~/.config/eww/ollama-eww/ollama_conversation.txt"))
