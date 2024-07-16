@@ -12,9 +12,6 @@
       :class {WORKSPACES[2]==1 ? "active" : ""}
       :onclick "hyprctl dispatch workspace 3" {ACTIVEWORKSPACE==3 ? "" : "三"}
     )
-    (button
-      :class {WORKSPACE[]}
-    )
   )
 )
 
