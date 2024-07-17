@@ -1,0 +1,4 @@
+#!/bin/sh
+
+BRIGHTNESS=$(brightnessctl | grep -oP '\d+(?=%)')
+echo "$BRIGHTNESS"

@@ -16,3 +16,15 @@
     (box :class "label" value)
     )
 )
+
+
+(metric
+  :label ""
+  :value 100 
+  :onchange "brightnessctl s {}%"
+)
+    (metric
+      :label ""
+      :value {replace(VOLUME, '\%', '')}
+      :onchange "amixer sset Master {}%"
+    )

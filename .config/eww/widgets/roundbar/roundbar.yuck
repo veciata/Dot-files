@@ -1,4 +1,4 @@
-(include "./widgets/roundbar/modules/metric.yuck")
+;;(include "./widgets/roundbar/modules/metric.yuck")
 (include "./widgets/roundbar/modules/workspace.yuck")
 (include "./widgets/roundbar/modules/modules.yuck")
 (include "./widgets/roundbar/modules/def.yuck")
@@ -21,17 +21,7 @@
 
 (defwidget modules []
   (box :orientation "h" :halign "end" :class "modules" :space-evenly false :spacing 20
-    (system-tray) 
-(metric
-  :label ""
-  :value 100 
-  :onchange "brightnessctl s {}%"
-)
-    (metric
-      :label ""
-      :value {replace(VOLUME, '\%', '')}
-      :onchange "amixer sset Master {}%"
-    )
+
 
     (clock-and-date)
     (gear)

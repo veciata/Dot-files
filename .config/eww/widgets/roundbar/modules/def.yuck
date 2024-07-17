@@ -1,5 +1,6 @@
 (defpoll TIME :interval "5s" `date +'%H:%M'`)
 (defpoll VOLUME :interval "1s" "./scripts/getvol")
+(defpoll BRIGHTNESS :interval "1s" "./scripts/getbrt")
 
 (defpoll PLAYING :interval "1s" "./scripts/getmusicinfo --status")
 (defpoll SONG :interval "1s" "./scripts/getmusicinfo --song")

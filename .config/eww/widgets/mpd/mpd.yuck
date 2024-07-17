@@ -21,6 +21,7 @@
         (label :text {(MPD_STATE == "playing" ? "󰏥" : (MPD_STATE == "paused" ? "󰐌" : "󰙦"))})
       )
       (button :class "mpd-button" :onclick "mpc next" "󰙡")  ;; Next track
+      (button :class "mpd-button" :onclick "mpc ls" "󰅆")  ;; Show music list
     )
     (progress :class "mpd-prog-bar" :orientation "h" :hexpand true :halign "fill" :value MPD_TIME)
   )

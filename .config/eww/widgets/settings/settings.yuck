@@ -1,5 +1,8 @@
 (defpoll DATE :interval "60s" `date +'%a, %d %b %Y'`)
 
+
+
+
 (defwidget settings []
   (box :class "settings-window" :orientation "v" :space-evenly false
     (settings-row1)
@@ -38,11 +41,13 @@
     (settings-slider :icon "" :value {replace(VOLUME, '\%', '')} :onchange "amixer sset Master {}%")
      ;;(s(ettings-slider :icon "" :value 90 :onchange "echo 'brightness'")
 
-(settings-slider
-  :icon ""
-  :value 100 ;; :TODO
-  :onchange "brightnessctl set {}%"
+(settings-slider 
+      :icon ""
+      ;;:value 
+      :value {replace(BRIGHTNESS, '\%', '')}
+      :onchange "brightnessctl set {}%"
 )
+
 
     ;;(settings-slider :icon "" :value 50 :onchange "echo 'brightness'")
     
