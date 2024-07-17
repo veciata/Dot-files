@@ -1,0 +1,28 @@
+
+(defpoll MPD_ARTIST :interval "1s" "mpc current | awk -F ' - ' '{print $2}'")
+(defpoll MPD_TITLE :interval "1s" "mpc current | awk -F ' - ' '{print $1}'")
+(defpoll MPD_COVER :interval "1s" "./scripts/getmusicinfo --cover")
+(defpoll MPD_TIME :interval "1s" "mpc status | grep -o '[0-9]\\+:[0-9]\\+'")
+(defpoll MPD_STATE :interval "1s" "mpc status | grep -oP '(?<=\\[)[a-zA-Z]+(?=\\])'")
+
+(defwidget mpd []
+  (box :class "mpd-widget" :orientation "v" :space-evenly false
+    (box :class "mpd-meta" :orientation "h" :space-evenly false :halign "center"
+      (box :class "mpd-art" :style "background-image: url('${MPD_COVER}')")
+      (box :class "mpd-info" :orientation "v" :space-evenly false :valign "center" :halign "start"
+        (label :class "mpd-title" :text MPD_TITLE)
+        (label :class "mpd-artist" :text MPD_ARTIST)
+      )
+    )
+    (box :class "mpd-controls" :orientation "h" :space-evenly false :halign "center"
+      (button :class "mpd-button" :onclick "mpc prev" "󰙣")  ;; Previous track
+      (button :class "mpd-button mpd-play"
+              :onclick {(MPD_STATE == "playing" ? "mpc pause" : (MPD_STATE == "paused" ? "mpc play" : ""))}
+        (label :text {(MPD_STATE == "playing" ? "󰏥" : (MPD_STATE == "paused" ? "󰐌" : "󰙦"))})
+      )
+      (button :class "mpd-button" :onclick "mpc next" "󰙡")  ;; Next track
+    )
+    (progress :class "mpd-prog-bar" :orientation "h" :hexpand true :halign "fill" :value MPD_TIME)
+  )
+)
+

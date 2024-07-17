@@ -11,38 +11,26 @@
   )
 )
 
+
 (defwidget middle []
-  (eventbox :onhover "eww update music_reveal=true"
-            :onhoverlost "eww update music_reveal=false"
-    (box :class "music-controls"
-         :orientation "h"
-         :space-evenly "false"
-      (revealer :reveal music_reveal
-                :transition "slideright"
-                :duration "250ms"
-        (box :class "music-buttons"
-          (button :class "music-button" :onclick "playerctl previous" "󰙣")
-          (button :class "music-button play-button"
-                  :onclick {(PLAYING == "Playing" ? "playerctl -p spotify pause" : (PLAYING == "Paused" ? "playerctl -p spotify play" : ""))}
-            (label :text {(PLAYING == "Playing" ? "󰏥" : (PLAYING == "Paused" ? "󰐌" : "󰙦"))}))
-          (button :class "music-button" :onclick "playerctl next" "󰙡")
-        )
-      )
-      (label :class {(PLAYING == "Playing" || PLAYING == "Paused" ? "spotify" : "spotify-off")} :text " ")
-      (button :class "song"
-              :onclick {(PLAYING == "Playing" ? "playerctl -p spotify pause" : (PLAYING == "Paused" ? "playerctl -p spotify play" : ""))}
-      (label :text SONG))
-    )
+   (box :orientation "h" :halign "end" :class "modules" :space-evenly false :spacing 20
+  (music)
   )
 )
+
 
 (defwidget modules []
   (box :orientation "h" :halign "end" :class "modules" :space-evenly false :spacing 20
     (system-tray) 
+(metric
+  :label ""
+  :value 100 
+  :onchange "brightnessctl s {}%"
+)
     (metric
       :label ""
       :value {replace(VOLUME, '\%', '')}
-      :onchange "pamixer sset Master {}%"
+      :onchange "amixer sset Master {}%"
     )
 
     (clock-and-date)

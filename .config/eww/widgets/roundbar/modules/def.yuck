@@ -8,5 +8,4 @@
 (defpoll ACTIVEWORKSPACE :interval "1s" "./scripts/getactiveworkspace")
 
 (defvar music_reveal false)
-
-
+(defpoll brightness_poll :interval "3s" "./scripts/brightness")

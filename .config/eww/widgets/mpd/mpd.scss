@@ -1,0 +1,92 @@
+
+$font-size: 16px;
+
+* {
+  all: unset;
+  font-family: GeistMono NF;
+}
+
+.mpd-widget {
+  background: lighten($grey, 0%);
+  margin: 5px 20px;
+   border: 2px solid $alt;
+  border-radius: 10px;
+}
+
+.mpd-meta {
+  padding: 20px 20px;
+}
+
+.mpd-art {
+  border-radius: 5px;
+  background-size: cover;
+  min-width: 100px;
+  min-height: 100px;
+  box-shadow: 0px 7px 10px shade($base, 0.7);
+}
+
+.mpd-info {
+  padding-left: 10px;
+  font-size: $font-size;
+}
+
+.mpd-title {
+  color: $alt;
+}
+
+.mpd-artist {
+  color: $text;
+}
+
+.mpd-controls {
+  font-size: $font-size * 2.5;
+}
+
+.mpd-button {
+  color: $alt;
+  transition: all 0.25s;
+}
+
+.mpd-button:hover {
+  color: $glow;
+  text-shadow: 0px 7px 5px $base;
+}
+
+.mpd-play {
+  padding: 0 20px 0 20px;
+}
+
+.mpd-prog-bar {
+  padding: 20px;
+}
+
+.mpd-prog-bar trough {
+  min-height: 8px;
+  background: $base;
+  border-radius: 10px;
+}
+
+.mpd-prog-bar trough progress {
+  background: $accent;
+  min-height: 8px;
+  border-radius: 10px;
+}
+
+.mpd-check {
+  color: transparent;
+  padding-right: 16px;
+}
+
+.mpd-check label {
+  color: $text;
+  transition: all 0.25s;
+}
+
+.mpd-check:hover label {
+  color: $glow;
+  text-shadow: 0px 0px 7px $accent;
+}
+
+.mpd-check:checked label {
+  color: $accent;
+}

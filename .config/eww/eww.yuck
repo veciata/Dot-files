@@ -1,6 +1,7 @@
 (include "./widgets/roundbar/roundbar.yuck")
 (include "./widgets/settings/settings.yuck")
 (include "./widgets/spotify/spotify.yuck")
+(include "./widgets/mpd/mpd.yuck")
 
 (defwindow roundbar
   :monitor 0
@@ -45,4 +46,20 @@
   :stacking "fg"
   :exclusive false
   (spotify)
+)
+
+
+(defwindow mpd
+  :monitor 0
+  :geometry (geometry
+  :x "0%"
+  :y "0%"
+  :width "450px"
+  :height "50px"
+  :anchor "top center"
+  )
+  :windowtype "normal"
+  :stacking "fg"
+  :exclusive false
+  (mpd)
 )

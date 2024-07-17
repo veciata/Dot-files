@@ -10,15 +10,8 @@ Welcome to my arch based Hyprland configuration repository! This setup is optimi
 - [Credits](#credits)
 
 ## Screenshots
-![Main](Screenshots/Screenshot.png)
-
-![Main](Screenshots/Screenshot2.jpeg)
-
-![Main](Screenshots/screenshot.png)
-
-![Main](Screenshots/Screenshot3.png)
-
 ![Main](Screenshots/Screenshot4.png)
+
 ## Introduction
 This repository contains my personal configuration files for [Hyprland](https://github.com/hyprwm/Hyprland), a dynamic tiling Wayland compositor. The configuration is tailored for a two-monitor setup and includes settings for various applications and utilities to enhance productivity.
 
@@ -38,18 +31,18 @@ To use this configuration, follow these steps:
     cp Dot-files/.zshrc ~/
 3. install nesseserry packages
     ```sh
-   sudo pacman -Syu hyprland waybar eza zsh alacritty neovim wl-clipboard brightnessctl pavucontrol\
-   grim slurp thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
-   ttf-firacode-nerd ttf-iosevka-nerd hypridle zoxide exa gsettings-desktop-schemas xfce-polkit thefuck\
-   kdeconnect ffmpeg nwg-look pulseaudio zellij pulsemixer btop partitionmanager bluez\
-   nvidia-settings nvidia nvidia-utils nvidia-open font-manager ark openssh speedtest-cli\
-   thunderbird yazi nm-connection-editor hostapd mpd ncmpcpp mpc qbittorrent ollama calcurse
+   sudo pacman -Syu hyprland eza zsh alacritty neovim wl-clipboard brightnessctl pavucontrol\
+    thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
+   ttf-firacode-nerd ttf-iosevka-nerd hypridle zoxide exa  xfce-polkit thefuck\
+   kdeconnect ffmpeg pulseaudio tmux pulsemixer btop partitionmanager bluez\
+   nvidia-settings nvidia-utils nvidia-open font-manager ark  speedtest-cli\
+   thunderbird yazi nm-connection-editor hostapd mpd ncmpcpp mpc qbittorrent  
 
    yay -S papirus-icon-theme rofi-lbonn-wayland-git wallock wallock-git bibata-cursor-theme-bin nordic-theme\
-   nordic-darker-theme pipewire-enable-bluez5 silo-trello grimblast-git mpdevil\
-   oh-my-posh brillo
+   nordic-darker-theme pipewire-enable-bluez5 silo-trello grimblast-git \
+   oh-my-posh brillo eww-tray-wayland-git 
     ```
-
+ ### If necessary you can compile eww-tray-wayland from github 
 
 
 ## Keybindings
@@ -75,7 +68,7 @@ Here are some of the keybindings defined in the configuration:
 https://github.com/yusufipk/hyprconf
 
 Hyprland
-Waybar
+
 Rofi
 
 Feel free to customize and extend the configuration to suit your needs. If you encounter any issues or have suggestions, please open an issue on this repository.

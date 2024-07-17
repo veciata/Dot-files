@@ -4,10 +4,11 @@
   (box :class "settings-window" :orientation "v" :space-evenly false
     (settings-row1)
     ;; (spacer-line)
-    (spotify)
-    ;; (spacer-line)
+    ;; (mpd)
+    (spacer-line)
     (settings-row2)
     )
+    
   )
 
 (defwidget settings-row1 []
@@ -35,8 +36,16 @@
 (defwidget settings-sliders []
   (box :class "settings-sliders" :orientation "v" :space-evenly false :valign "center":halign "center"
     (settings-slider :icon "" :value {replace(VOLUME, '\%', '')} :onchange "amixer sset Master {}%")
-    (settings-slider :icon "" :value 90 :onchange "echo 'brightness'")
-    (settings-slider :icon "" :value 50 :onchange "echo 'brightness'")
+     ;;(s(ettings-slider :icon "" :value 90 :onchange "echo 'brightness'")
+
+(settings-slider
+  :icon ""
+  :value 100 ;; :TODO
+  :onchange "brightnessctl set {}%"
+)
+
+    ;;(settings-slider :icon "" :value 50 :onchange "echo 'brightness'")
+    
     )
   )
 
@@ -59,3 +68,4 @@
   )
 
 (defwidget date [] (box :class "date" DATE))
+
