@@ -25,3 +25,8 @@
             "󰝚")
 
 )
+
+(defwidget tray []
+	(systray :pack-direction "ttb"
+			 :icon-size 24
+			 :class "bar-tray"))
