@@ -11,7 +11,6 @@
     "wlr/taskbar",
     "custom/playerctl",
     "custom/playerlabel"
-    ""
   ],
   "modules-center": [
   "cpu",
