@@ -3,15 +3,20 @@
 * {
   border: none;
   border-radius: 0px;
+  opacity:1;
   font-family: Iosevka, FontAwesome, Noto Sans CJK;
   font-size: 14px;
   font-style: normal;
   min-height: 0;
 }
+#waybar{
+
+}
 
 window#waybar {
-  background: @color1;
-  border-bottom: 2px solid @color6;
+  background: @color1;  
+  background-color: rgba(123,123,123,0.2);
+  border-bottom: 4px solid @color6;
   color: @color5;
 }
 
