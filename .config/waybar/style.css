@@ -1,21 +1,23 @@
-@import url("./theme/redblue.css");
+@import url("./theme/mycolors.css");
 
 * {
   border: none;
   border-radius: 0px;
-  opacity:1;
-  font-family: Iosevka, FontAwesome, Noto Sans CJK;
+  opacity: 1;
+  font-family:
+    Iosevka,
+    FontAwesome,
+    Noto Sans CJK;
   font-size: 14px;
   font-style: normal;
   min-height: 0;
 }
-#waybar{
-
+#waybar {
 }
 
 window#waybar {
-  background: @color1;  
-  background-color: rgba(123,123,123,0.2);
+  background: @color1;
+  background-color: rgba(123, 123, 123, 0.2);
   border-bottom: 4px solid @color6;
   color: @color5;
 }
@@ -64,7 +66,7 @@ window#waybar {
 #pulseaudio,
 #network,
 #custom-randwall,
-#backlight ,
+#backlight,
 #custom-updates,
 #custom-launcher {
   background: @color2;
@@ -72,7 +74,6 @@ window#waybar {
   margin: 1px 3px 5px 3px;
   border-radius: 8px;
 }
-
 
 #custom-power {
   color: @color2;
@@ -109,7 +110,6 @@ window#waybar {
   color: white;
   border-radius: 5px;
 }
-
 
 #network {
   color: @color5;
@@ -231,4 +231,3 @@ window#waybar {
 #custom-weather.default {
   color: #dbd9d8;
 }
-
