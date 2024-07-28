@@ -1,8 +1,6 @@
-
 @define-color color1 #2E3440; /* bg color */
 @define-color color2 #3B4252; /* item bg color */
 @define-color color3 #434C5E; /* item hover bg color */
-@define-color color4 #E5E9F0; /* text color */
-@define-color color5 #D8DEE9; /* second text color */
+@define-color color4 #FFF; /* text color */
+@define-color color5 #C0C0C0; /* second text color */
 @define-color color6 #4C566A; /* line color */
-
