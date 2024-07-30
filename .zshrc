@@ -39,7 +39,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/mojada.omp.json)"
 
 # Keybindings
 bindkey -e
@@ -80,6 +80,8 @@ alias ls="eza"
 alias la="eza -a"
 alias ll="eza -l"
 alias f="fuck"
+
+alias tn="tmux new -s \$(pwd | awk -F/ '{print \$NF}')"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd z zsh)"
