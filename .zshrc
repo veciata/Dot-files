@@ -2,6 +2,9 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
+export TERMINAL=wezterm
+export FILE_MANAGER=thunar
+export EDITOR=nvim
 
 if [[ -f "~/.pyvenv" ]] then
   source "~/.pyvenv/bin/activate"
