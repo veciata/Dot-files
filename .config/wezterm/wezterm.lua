@@ -22,6 +22,9 @@ config.enable_wayland = false
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
+
+config.default_cursor_style = "BlinkingBar"
+
 config.colors = {
 	foreground = colors.color4, -- text color
 	background = colors.color1, -- bg color
@@ -53,7 +56,6 @@ config.colors = {
 	},
 }
 
--- Other configurations
 config.font_size = 12.0
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.9

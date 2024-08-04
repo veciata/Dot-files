@@ -33,7 +33,7 @@
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": ["kitty"],
+    "ignore-list": ["$terminal"],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition",
     },
@@ -78,7 +78,7 @@
     "interval": 7200, // every two hours
     //"exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'", // # of updates and tooltip details
     "exec-if": "exit 0", // always run; consider advanced run conditions
-    "on-click": "kitty -e sudo pacman -Syu", // update system
+    "on-click": "$terminal -e sudo pacman -Syu", // update system
     "signal": 8,
   },
   "bluetooth": {
@@ -99,7 +99,7 @@
     "exec": "date +' %H:%M   %d/%m  󰃱 '",
     "interval": 1,
     "tooltip": false,
-    "on-click": "kitty -e 'calcurse'",
+    "on-click": "$terminal -e 'calcurse'",
   },
   "hyprland/workspaces": {
     "sort-by-number": true,

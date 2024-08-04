@@ -38,12 +38,12 @@ To use this configuration, follow these steps:
     cp Dot-files/.zshrc ~/
 3. install nesseserry packages
     ```sh
-   sudo pacman -Syu hyprland waybar eza zsh alacritty neovim wl-clipboard brightnessctl pavucontrol\
+   sudo pacman -Syu hyprland waybar eza zsh  wezterm wl-clipboard brightnessctl pavucontrol\
    grim slurp thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
-   ttf-firacode-nerd ttf-iosevka-nerd hypridle zoxide exa gsettings-desktop-schemas xfce-polkit thefuck\
+   ttf-firacode-nerd ttf-iosevka-nerd hypridle zoxide exa gsettings-desktop-schemas polkit-gnome thefuck\
    kdeconnect ffmpeg nwg-look pulseaudio zellij pulsemixer btop partitionmanager bluez\
-   nvidia-settings nvidia nvidia-utils nvidia-open font-manager ark openssh speedtest-cli\
-   thunderbird yazi nm-connection-editor hostapd mpd ncmpcpp mpc qbittorrent ollama calcurse
+    font-manager ark openssh speedtest-cli\
+   thunderbird yazi nm-connection-editor hostapd mpd ncmpcpp mpc qbittorrent calcurse
 
    yay -S papirus-icon-theme wallock wallock-git bibata-cursor-theme-bin nordic-theme\
    nordic-darker-theme pipewire-enable-bluez5  grimblast-git mpdevil\
@@ -51,6 +51,7 @@ To use this configuration, follow these steps:
     ```
 
 
+    if you wanna change terminal you can do it on .zshrc $terminal and .config/hypr/defaultset.conf $terminal changes.
 
 ## Keybindings
 
