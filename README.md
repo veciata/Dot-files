@@ -39,11 +39,11 @@ To use this configuration, follow these steps:
 3. install nesseserry packages
     ```sh
    sudo pacman -Syu hyprland waybar eza zsh  wezterm wl-clipboard brightnessctl pavucontrol\
-   grim slurp thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
+    thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
    ttf-firacode-nerd ttf-iosevka-nerd hypridle zoxide exa gsettings-desktop-schemas polkit-gnome thefuck\
-   kdeconnect ffmpeg nwg-look pulseaudio zellij pulsemixer btop partitionmanager bluez\
+   kdeconnect ffmpeg  pulseaudio zellij pulsemixer btop  bluez\
     font-manager ark openssh speedtest-cli\
-   thunderbird yazi nm-connection-editor hostapd mpd ncmpcpp mpc qbittorrent calcurse
+   thunderbird yazi nm-connection-editor hostapd mpd ncmpcpp mpc calcurse
 
    yay -S papirus-icon-theme wallock wallock-git bibata-cursor-theme-bin nordic-theme\
    nordic-darker-theme pipewire-enable-bluez5  grimblast-git mpdevil\
