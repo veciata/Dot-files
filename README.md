@@ -58,7 +58,6 @@ To use this configuration, follow these steps:
 Here are some of the keybindings defined in the configuration:
 
     | Key Combination          | Action                                  |
-|--------------------------|-----------------------------------------|
 | Super + Return           | Open terminal                           |
 | Super + D                | Open application launcher (rofi)        |
 | Super + Q or Alt + F4    | Close focused window                    |
