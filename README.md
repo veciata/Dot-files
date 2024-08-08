@@ -57,19 +57,18 @@ To use this configuration, follow these steps:
 
 Here are some of the keybindings defined in the configuration:
 
-    | Key Combination          | Action                     
-|
-| Super + Return           | Open terminal                           |
-| Super + D                | Open application launcher (rofi)        |
-| Super + Q or Alt + F4    | Close focused window                    |
-| Super + H/J/K/L          | Move focus between windows              |
-| Super + Shift + H/J/K/L  | Move windows                            |
-| Super + F                | Toggle fullscreen                       |
-| Super + E                | File manager                            |
-| Super + W                | Web browser                             |
-| Super + (1-0)            | Workspaces 1 to 10 (monitor 1)          |
-| Super + Alt + (1-0)      | Workspaces 11 to 20 (monitor 2)         |
-
+ | Key Combination          | Action                                    |
+|--------------------------|-------------------------------------------|
+| Super + Return           | Open terminal                             |
+| Super + D                | Open application launcher (rofi)          |
+| Super + Q or Alt + F4    | Close focused window                      |
+| Super + H/J/K/L          | Move focus between windows                |
+| Super + Shift + H/J/K/L  | Move windows                              |
+| Super + F                | Toggle fullscreen                         |
+| Super + E                | Open file manager                         |
+| Super + W                | Open web browser                          |
+| Super + (1-0)            | Switch to workspaces 1 to 10 on monitor 1 |
+| Super + Alt + (1-0)      | Switch to workspaces 11 to 20 on monitor 2|
 
 ## Credits
 ### Başlangıç olarak burdan çok fazla yararlandım global olması için ingilizce yazdım repoyu ama teşekkürümü Türkçe yapmalıyım. Dil değiştirmek istersenizde input.conf içerisinden değiştireblirsiniz.
