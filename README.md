@@ -57,16 +57,18 @@ To use this configuration, follow these steps:
 
 Here are some of the keybindings defined in the configuration:
 
-    Super + Return: Open terminal
-    Super + D: Open application launcher (rofi)
-    Super + Q or Alt + F4: Close focused window
-    Super + H/J/K/L: Move focus between windows
-    Super + Shift + H/J/K/L: Move windows
-    Super + F: Toggle fullscreen
-    Super + E: File manager
-    Super + W: Web browser
-    Super + (1-0): Workspaces 1 to 10 monitor 1
-    SuperAlt + (1-0): Workspaces 11-20 monitor 2
+    | Key Combination          | Action                                  |
+|--------------------------|-----------------------------------------|
+| Super + Return           | Open terminal                           |
+| Super + D                | Open application launcher (rofi)        |
+| Super + Q or Alt + F4    | Close focused window                    |
+| Super + H/J/K/L          | Move focus between windows              |
+| Super + Shift + H/J/K/L  | Move windows                            |
+| Super + F                | Toggle fullscreen                       |
+| Super + E                | File manager                            |
+| Super + W                | Web browser                             |
+| Super + (1-0)            | Workspaces 1 to 10 (monitor 1)          |
+| Super + Alt + (1-0)      | Workspaces 11 to 20 (monitor 2)         |
 
 
 ## Credits
