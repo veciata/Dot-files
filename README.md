@@ -3,6 +3,7 @@
 Welcome to my arch based Hyprland configuration repository! This setup is optimized for a dual monitor system.
 
 ## Table of Contents
+
 - [Screenshots](#screenshots)
 - [Introduction](#introduction)
 - [Installation](#installation)
@@ -10,6 +11,7 @@ Welcome to my arch based Hyprland configuration repository! This setup is optimi
 - [Credits](#credits)
 
 ## Screenshots
+
 ![Main](Screenshots/Screenshot.png)
 
 ![Main](Screenshots/Screenshot2.jpeg)
@@ -19,39 +21,48 @@ Welcome to my arch based Hyprland configuration repository! This setup is optimi
 ![Main](Screenshots/Screenshot3.png)
 
 ![Main](Screenshots/Screenshot4.png)
+
 ## Introduction
+
 This repository contains my personal configuration files for [Hyprland](https://github.com/hyprwm/Hyprland), a dynamic tiling Wayland compositor. The configuration is tailored for a two-monitor setup and includes settings for various applications and utilities to enhance productivity.
 
 ## Installation
+
 To use this configuration, follow these steps:
 
 1. Clone the repository:
+
    ```sh
    git clone https://github.com/veciata/Dot-files.git
 
     Copy the configuration files to your home directory:
 
-2. manually link your config or clone like here
-    ```sh
+   ```
 
-    cp -r Dot-files/.config/ ~/
-    cp Dot-files/.zshrc ~/
+2. manually link your config or clone like here
+
+   ```sh
+
+   cp -r Dot-files/.config/ ~/
+   cp Dot-files/.zshrc ~/
+   ```
+
 3. install nesseserry packages
-    ```sh
-   sudo pacman -Syu hyprland waybar eza zsh  wezterm wl-clipboard brightnessctl pavucontrol\
-   grim slurp thunar network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
+
+   ```sh
+   sudo pacman -Syu hyprland waybar eza zsh  kitty wl-clipboard brightnessctl pavucontrol\
+   grim slurp dolphin network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
    ttf-firacode-nerd ttf-iosevka-nerd hypridle zoxide exa gsettings-desktop-schemas polkit-gnome thefuck\
    kdeconnect ffmpeg nwg-look pulseaudio zellij pulsemixer btop partitionmanager bluez\
-    font-manager ark openssh speedtest-cli\
-   thunderbird yazi nm-connection-editor hostapd mpd ncmpcpp mpc qbittorrent calcurse
+   font-manager ark openssh speedtest-cli\
+   thunderbird yazi nm-connection-editor hostapd mpd ncmpcpp mpc qbittorrent calcurse pulsemixer
 
    yay -S papirus-icon-theme wallock wallock-git bibata-cursor-theme-bin nordic-theme\
    nordic-darker-theme pipewire-enable-bluez5  grimblast-git mpdevil\
    oh-my-posh brillo rofi-lbonn-wayland-git
-    ```
+   ```
 
-
-    if you wanna change terminal you can do it on .zshrc $terminal and .config/hypr/defaultset.conf $terminal changes.
+   if you wanna change terminal you can do it on .zshrc $terminal and .config/hypr/defaultset.conf $terminal changes.
 
 ## Keybindings
 
@@ -68,9 +79,10 @@ Here are some of the keybindings defined in the configuration:
     Super + (1-0): Workspaces 1 to 10 monitor 1
     SuperAlt + (1-0): Workspaces 11-20 monitor 2
 
-
 ## Credits
+
 ### Başlangıç olarak burdan çok fazla yararlandım global olması için ingilizce yazdım repoyu ama teşekkürümü Türkçe yapmalıyım. Dil değiştirmek istersenizde input.conf içerisinden değiştireblirsiniz.
+
 ### "I have benefited a lot from here as a starting point, so I wrote the repo in English to make it more global, but I should express my gratitude in Turkish. If you want to change the language, you can do so from the input.conf file."
 
 https://github.com/yusufipk/hyprconf

@@ -22,6 +22,7 @@
     "pulseaudio",
     "backlight",
     "battery",
+    "custom/swaync",
     "custom/weather",
     "custom/clock",
   ],
@@ -78,7 +79,7 @@
     "interval": 7200, // every two hours
     //"exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'", // # of updates and tooltip details
     "exec-if": "exit 0", // always run; consider advanced run conditions
-    "on-click": "$terminal -e sudo pacman -Syu", // update system
+    "on-click": "kitty -e sudo pacman -Syu", // update system
     "signal": 8,
   },
   "bluetooth": {
@@ -255,5 +256,11 @@
     "format": "󰈋",
     "on-click": "hyprpicker -a -f hex",
     "on-click-right": "hyprpicker -a -f rgb",
+  },
+  "custom/swaync": {
+    "exec": "swaync-client --get-dnd | grep -q true && echo '' || echo ''", // Show different icons based on DND status
+    "tooltip": false,
+    "on-click": "swaync-client --toggle-panel",
+    "interval": 1,
   },
 }
