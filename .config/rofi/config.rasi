@@ -1,149 +1,105 @@
-  * {
-        bg:  #1a1c23;
-        background-color: @bg;
-    }
+configuration{
+    modi: "drun";
+    font: "Ubuntu Nerd Font 12";
+    lines: 5;
+    show-icons: true;
+    icon-theme: "Oranchelo";
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "  ";
+    /* display-Network: " 󰤨  Network"; */
+    sidebar-mode: false;
+}
 
-    configuration {
-	    show-icons: true;
-	    icon-theme: "Papirus-Apps";
-	    location: 0;
-	    font: "JetBrainsMono Nerd Font 12";
-	    display-drun: "Launch";
-    }
+@theme "forest"
 
-    window {
-	    width: 35%;
-	    transparency: "real";
-	    orientation: vertical;
-	    border-color: #7c8389;
-        border-radius: 10px;
-    }
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
 
-    mainbox {
-	    children: [inputbar, listview];
-    }
+element-text {
+    vertical-align: 0.5;
+}
 
+window {
+    height: 360px;
+    border: 0px;
+    border-color: @border-col;
+    background-color: @bg-col;
+}
 
-    // ELEMENT
-    // -----------------------------------
+mainbox {
+    background-color: @bg-col;
+}
 
-    element {
-	    padding: 4 12;
-	    text-color: #1a1c23;
-        border-radius: 5px;
-    }
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
+}
 
-    element selected {
-	    text-color: #ffffff;
-	    background-color: #ffb454;
-    }
+prompt {
+    background-color: @blue;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 5px;
+    margin: 20px 0px 0px 20px;
+}
 
-    element-text {
-	    background-color: inherit;
-	    text-color: inherit;
-    }
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
 
-    element-icon {
-	    size: 16 px;
-	    background-color: inherit;
-	    padding: 0 6 0 0;
-	    alignment: vertical;
-    }
+entry {
+    padding: 6px;
+    margin: 20px 0px 0px 10px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
 
-	element.selected.active {
-		background-color: #1a1c23;
-		text-color: #bbbdbe;
-	}
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 20px 0px 20px;
+    columns: 1;
+    background-color: @bg-col;
+}
 
-	element.alternate.normal {
-		background-color: #1a1c23;
-		text-color: #bbbdbe;
-	}
+element {
+    padding: 5px;
+    background-color: @bg-col;
+    text-color: @fg-col  ;
+}
 
+element-icon {
+    size: 25px;
+}
 
-	element.alternate.active {
-		background-color: #484d63;
-		text-color: #bbbdbe;
-	}
+element selected {
+    background-color:  @selected-col ;
+    text-color: @fg-col2  ;
+    border-radius: 5px  ;
+}
 
-	element.selected.normal {
-		background-color: #484d63;
-		text-color: #1a1c23;
-	}
+mode-switcher {
+    enabled: false;
+}
 
+button {
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @grey;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
 
-	element.normal.active {
-		background-color: #1a1c23;
-		text-color: #bbbdbe;
-	}
-
-
-	element.normal.normal {
-		background-color: #1a1c23;
-		text-color: #bbbdbe;
-	}
-
-	element.normal.urgent {
-		background-color: #2d303b;
-		text-color: #1a1c23;
-	}
-
-    // LISTVIEW
-    //------------------------------------------------
-
-    listview {
-	    columns: 2;
-	    lines: 9;
-	    padding: 8 0;
-	    fixed-height: true;
-	    fixed-columns: true;
-	    fixed-lines: true;
-	    border: 0;
-        scrollbar: false;
-    }
-
-    // INPUT BAR
-    //------------------------------------------------
-
-    entry {
-	    text-color: #f27893;
-	    padding: 10 10 0 0;
-	    margin: 0 -2 0 -6;
-        placeholder: "Search";
-    }
-
-    inputbar {
-	    background-image: url("~/dotfiles/hypr/assets/rofi.png", width);
-	    padding: 200 0 0;
-	    margin: 0 -2 0 0;
-    }
-
-    prompt {
-	    text-color: #bd93f9;
-	    padding: 10 6 0 10;
-	    margin: 0 -2 0 0;
-    }
-
-
-    // MESSAGE
-    //------------------------------------------------
-
-    message {
-        background-color:           #1a1c23;
-        margin:						0 -2 0 0;
-        border-radius: 				10px;
-    }
-
-    textbox {
-        padding:                    10px;
-        background-color:      		#1a1c23;
-        text-color:                 #bd93f9;
-    }
-
-    error-message {
-        padding:                    15px;
-        border-radius:            	10px;
-        background-color:      		#1a1c23;
-        text-color:                 #bd93f9;
-    }
-
+button selected {
+  background-color: @bg-col;
+  text-color: @blue;
+}
