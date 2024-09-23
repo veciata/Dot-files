@@ -1,3 +1,4 @@
 .config/mpd/log
 .config/mpd/state
 .config/mpd/pid
+.config/tmux/plugins/

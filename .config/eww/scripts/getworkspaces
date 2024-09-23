@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 WORKSPACES=$(hyprctl workspaces | awk '/workspace/ {print $3}' 2> /dev/null)
@@ -7,7 +6,6 @@ declare -a ACTIVE_LIST=()
 declare -a OTHER_LIST=()
 declare -A WSP
 
-# Initialize active workspace array for predefined workspaces
 PREDEFINED_WORKSPACES=(1 2 3 11 12 13)
 
 for i in "${PREDEFINED_WORKSPACES[@]}"; do
@@ -24,13 +22,20 @@ for i in $WORKSPACES; do
   fi
 done
 
-# Create the JSON output
+for i in $WORKSPACES; do
+  WINDOWS=$(hyprctl clients | grep -c "workspace $i")
+
+  if [[ $WINDOWS -gt 0 ]]; then
+    WSP[$i]=1
+  else
+    WSP[$i]=0
+  fi
+done
+
 OUTPUT="{"
 for i in "${!WSP[@]}"; do
   OUTPUT+="\"$i\": ${WSP[$i]},"
 done
 
-# Remove the trailing comma and close the JSON object
 OUTPUT="${OUTPUT%,}}"
 echo "$OUTPUT" | jq .
-

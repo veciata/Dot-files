@@ -3,7 +3,7 @@ $font-size: 16px;
 
 * {
   all: unset;
-  font-family: GeistMono NF;
+  font-family: Fira Code;
   font-weight: Bold;
 }
 
@@ -140,6 +140,9 @@ $font-size: 16px;
 
 .workspaces .active {
   color: $text;
+}
+.workspaces .hidden {
+  color: rgba(0, 0, 0, 0);
 }
 
 @keyframes pulse {
