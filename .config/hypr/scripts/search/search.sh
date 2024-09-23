@@ -42,16 +42,42 @@ gen_list() {
   done
 }
 
+HISTORY_FILE="$HOME/.search_history"
+
+if [ ! -f "$HISTORY_FILE" ]; then
+  touch "$HISTORY_FILE"
+fi
+
+# Python scriptini kullanarak Google otomatik tamamlama önerileri alma
+autocomplete() {
+  local query="$1"
+  python3 google_suggest.py "$query"
+}
+
 main() {
-  # Pass the list to rofi
-  platform=$( (gen_list) | rofi -dmenu -matching fuzzy -no-custom -location 0 -p "Search > ")
+  # Kullanıcıya platform seçimi sunulur
+  platform=$( (for key in "${!URLS[@]}"; do echo "$key"; done) | rofi -dmenu -matching fuzzy -no-custom -location 0 -p "Search > ")
 
   if [[ -n "$platform" ]]; then
-    query=$( (echo) | rofi -dmenu -matching fuzzy -location 0 -p "Query > ")
+    # Eğer Google seçildiyse otomatik tamamlama özelliği eklenir
+    if [[ "$platform" == "google" ]]; then
+      initial_query=$( (echo) | rofi -dmenu -matching fuzzy -location 0 -p "Query > ")
 
+      if [[ -n "$initial_query" ]]; then
+        # Google Suggest API ile öneriler alınıyor
+        suggestions=$(autocomplete "$initial_query")
+        query=$(echo "$suggestions" | rofi -dmenu -matching fuzzy -location 0 -p "Suggestions > ")
+      fi
+    else
+      # Diğer platformlar için normal sorgu girişi
+      query=$( (echo) | rofi -dmenu -matching fuzzy -location 0 -p "Query > ")
+    fi
+
+    # Eğer bir sorgu girilmişse devam eder
     if [[ -n "$query" ]]; then
+      echo "$query" >>"$HISTORY_FILE" # Geçmişe kaydet
       url=${URLS[$platform]}$query
-      $browser --private-window "$url"
+      $browser --private-window "$url" # Aramayı aç
     else
       exit
     fi

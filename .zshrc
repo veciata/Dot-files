@@ -39,7 +39,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/mojada.omp.json)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 
 # Keybindings
 bindkey -e
@@ -104,4 +104,7 @@ PATH=~/.console-ninja/.bin:$PATH
 eval "$(atuin init zsh)"
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export GBM_BACKEND=nvidia-drm
+
+export terminal="wezterm"
+export browser="zen-browser"
 
