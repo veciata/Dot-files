@@ -22,8 +22,9 @@
 (defwidget modules []
   (box :orientation "h" :halign "end" :class "modules" :space-evenly false :spacing 20
 ;;    (systray)
-;;  (tray)
+  (tray)
 
+    (weather)
     (clock-and-date)
     (gear)
   )

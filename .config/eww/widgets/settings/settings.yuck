@@ -38,7 +38,7 @@
 
 (defwidget settings-sliders []
   (box :class "settings-sliders" :orientation "v" :space-evenly false :valign "center":halign "center"
-    (settings-slider :icon "" :value {replace(VOLUME, '\%', '')} :onchange "amixer sset Master {}%")
+    (settings-slider :icon "" :value {replace(VOLUME, '\%', '')} :onchange "amixer set Master {}%")
      ;;(s(ettings-slider :icon "" :value 90 :onchange "echo 'brightness'")
 
 (settings-slider 

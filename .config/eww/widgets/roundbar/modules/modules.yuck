@@ -30,3 +30,28 @@
 	(systray :pack-direction "ttb"
 			 :icon-size 24
 			 :class "bar-tray"))
+
+;;weather
+
+
+(defpoll weather :interval "300s"
+  "python3 ~/.config/eww/scripts/weather.py")
+
+(defwidget weather []
+  (box
+    :orientation "h"
+    :class "weather-widget"
+    :space-evenly false
+    :spacing 10
+    (label
+      :id "weather-icon"
+      :text (weather "text") ;; Displays icon and temp
+      :tooltip (weather "tooltip")) ;; Tooltip with weather details
+    (label
+      :id "weather-temp"
+      :text (weather "text")
+      :tooltip (weather "tooltip"))
+  )
+)
+
+;;weather end
