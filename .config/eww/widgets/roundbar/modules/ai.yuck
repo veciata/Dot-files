@@ -1,0 +1,9 @@
+(defwindow aipanel
+      :monitor 0
+      :geometry (geometry :x "0px"
+                          :y "25px"
+                          :anchor "top left")
+      :stacking"overlay"
+      (label:text"Test")
+      )
+
