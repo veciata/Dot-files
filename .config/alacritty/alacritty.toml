@@ -2,7 +2,7 @@ import = [
     "~/.config/alacritty/themes/themes/tokyo-night.toml"
 ]
 
-[ env ]
+[env]
 TERM = "xterm-256color"
 
 [window]
@@ -11,19 +11,10 @@ padding.y = 10
 
 decorations = "Buttonless"
 
-#[font]
-#normal.family = "MesloLGS Nerd Font Mono"
-
-[font.italic]
-family = "FiraCode Nerd Font SemBd"
-style = "Italic"
-
-[font.normal]
-family = "FiraCode Nerd Font"
-style = "Regular"
-#regular
 [font]
-size = 12
+# normal.family = "Monospace"  # Temel bir font
+size = 10  # İhtiyacınıza göre boyutu ayarlayın
 
-#for video
-# size = 35.0
+# Alternatif olarak Courier New fontunu kullanabilirsiniz
+normal.family = "Courier New"
+
