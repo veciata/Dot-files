@@ -1,4 +1,5 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+#
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
@@ -80,6 +81,10 @@ alias ls="eza"
 alias la="eza -a"
 alias ll="eza -l"
 alias f="fuck"
+alias Hy="Hyprland"
+
+# sail
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
 alias tn="tmux new -s \$(pwd | awk -F/ '{print \$NF}')"
 # Shell integrations
@@ -105,3 +110,5 @@ eval "$(atuin init zsh)"
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export GBM_BACKEND=nvidia-drm
 
+export terminal="wezterm"
+export EDITOR="nvim"

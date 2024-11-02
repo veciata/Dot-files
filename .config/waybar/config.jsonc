@@ -22,7 +22,6 @@
     "pulseaudio",
     "backlight",
     "battery",
-    "custom/swaync",
     "custom/weather",
     "custom/clock",
   ],
@@ -135,7 +134,7 @@
       "default": "󰄰",
     },
     "persistent-workspaces": {
-      "eDP-2": [1, 2, 3],
+      "eDP-1": [1, 2, 3],
       "HDMI-A-1": [11, 12, 13],
     },
   },
@@ -227,12 +226,12 @@
     "format-bluetooth": "{icon} 󰂯 {volume}%",
     "format-muted": "  Mute",
     "format-icons": {
-      "headphone": " ",
-      "hands-free": " ",
-      "headset": " ",
-      "phone": " ",
-      "portable": " ",
-      "default": [" ", " ", " "],
+      "headphone": "🎧",
+      "hands-free": "🎤",
+      "headset": "🎧",
+      "phone": "📞",
+      "portable": "📱",
+      "default": ["🔊", "🔉", "🔈"],
       "ignored-sinks": ["Easy Effects Sink"],
     },
     "scroll-step": 5.0,
@@ -256,11 +255,5 @@
     "format": "󰈋",
     "on-click": "hyprpicker -a -f hex",
     "on-click-right": "hyprpicker -a -f rgb",
-  },
-  "custom/swaync": {
-    "exec": "swaync-client --get-dnd | grep -q true && echo '' || echo ''", // Show different icons based on DND status
-    "tooltip": false,
-    "on-click": "swaync-client --toggle-panel",
-    "interval": 1,
   },
 }

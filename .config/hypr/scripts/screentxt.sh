@@ -1,10 +1,18 @@
 #!/bin/bash
 
-TEMP_FILE="/tmp/screenshot.png"
-TEMP_TEXT="/tmp/screenshot"
+TEMP_FOLDER="/tmp/screenshot"
+TEMP_FILE="screenshot.png"
+TEMP_TEXT="/tmp/screenshot/screenshot"
 
+mkdir -p "$TEMP_FOLDER"
 
-grimblast --notify copysave area "$TEMP_FILE" 
-tesseract "$TEMP_FILE" "$TEMP_TEXT"
-wl-copy < "$TEMP_TEXT.txt"
-notify-send "Screenshot and text copied to clipboard!"
+hyprshot -m region -o "$TEMP_FOLDER" -f "$TEMP_FILE" -z -t 2000
+
+tesseract "$TEMP_FOLDER/$TEMP_FILE" "$TEMP_TEXT"
+
+if [ $? -eq 0 ]; then
+	wl-copy <"$TEMP_TEXT.txt"
+	notify-send "Screenshot and text copied to clipboard!" -t 2000
+else
+	notify-send "Failed to extract text from screenshot." -t 2000
+fi
