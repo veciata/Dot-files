@@ -39,7 +39,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+eval "$(starship init zsh)"
 
 # Keybindings
 bindkey -e
@@ -74,12 +74,14 @@ alias lvim='/home/veciata/.local/bin/lvim'
 alias c='clear'
 alias cd='z'
 
+alias docui="docker run --rm -itv /var/run/docker.sock:/var/run/docker.sock skanehira/docui"
 alias ai="ollama run llama3:70b"
 alias lal="eza --tree --level=2"
 alias ls="eza"
 alias la="eza -a"
 alias ll="eza -l"
 alias f="fuck"
+alias cp="rsync --info=progress2"
 
 alias tn="tmux new -s \$(pwd | awk -F/ '{print \$NF}')"
 # Shell integrations
@@ -108,3 +110,13 @@ export GBM_BACKEND=nvidia-drm
 export terminal="wezterm"
 export browser="zen-browser"
 
+export PATH=/opt/lampp/bin:$PATH
+### npm-global
+export PATH=$PATH:~/.npm-global/bin
+
+# bun completions
+[ -s "/home/vecia/.bun/_bun" ] && source "/home/vecia/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
