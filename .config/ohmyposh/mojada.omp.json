@@ -2,18 +2,17 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "background": "#000000",
-          "foreground": "#dd1e1e",
           "style": "plain",
-          "template": " \u26a1",
+          "template": " ⚡",
+          "foreground": "#dd1e1e",
+          "background": "#000000",
           "type": "root"
         },
         {
-          "background": "#000000",
-          "foreground": "#ffffff",
           "properties": {
             "alpine": "\uf300",
             "arch": "\uf303",
@@ -34,11 +33,11 @@
           },
           "style": "plain",
           "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "foreground": "#ffffff",
+          "background": "#000000",
           "type": "os"
         },
         {
-          "background": "#272727",
-          "foreground": "#43CCEA",
           "properties": {
             "folder_icon": "\ue5fe",
             "folder_separator_icon": " <#000000>\ue0bd </>",
@@ -47,78 +46,83 @@
           },
           "style": "plain",
           "template": " {{ .Path }} ",
+          "foreground": "#43CCEA",
+          "background": "#272727",
           "type": "path"
         },
         {
-          "background": "#272727",
-          "foreground": "#00ff0d",
           "properties": {
             "fetch_stash_count": true,
             "fetch_status": true
           },
           "style": "plain",
           "template": "<#000000>\ue0b1 </>{{ .HEAD }}{{ if .Staging.Changed }}<#FF6F00> \uf046 {{ .Staging.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "foreground": "#00ff0d",
+          "background": "#272727",
           "type": "git"
         },
         {
-          "background": "#272727",
-          "foreground": "#ffffff",
           "properties": {
             "style": "dallas",
             "threshold": 0
           },
           "style": "diamond",
-          "template": "<#000000>\ue0b1 </>{{ .FormattedMs }}s ",
           "trailing_diamond": "\ue0b0",
+          "template": "<#000000>\ue0b1 </>{{ .FormattedMs }}s ",
+          "foreground": "#ffffff",
+          "background": "#272727",
           "type": "executiontime"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "right",
       "segments": [
         {
-          "background": "#272727",
-          "foreground": "#43CCEA",
           "style": "diamond",
-          "template": "{{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "\ue0c5",
+          "template": "{{ .CurrentDate | date .Format }} ",
+          "foreground": "#43CCEA",
+          "background": "#272727",
           "type": "time"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "foreground": "#43CCEA",
-          "foreground_templates": ["{{ if gt .Code 0 }}#ff0000{{ end }}"],
           "properties": {
             "always_enabled": true
           },
           "style": "plain",
           "template": "❯ ",
-          "type": "status"
+          "foreground": "#43CCEA",
+          "background": "",
+          "type": "status",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#ff0000{{ end }}"
+          ]
         }
       ],
-      "type": "prompt"
+      "newline": true
     },
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#43CCEA",
           "style": "plain",
           "template": "❯ ",
+          "foreground": "#43CCEA",
+          "background": "",
           "type": "command"
         }
-      ],
-      "type": "prompt"
+      ]
     }
   ],
-  "final_space": true,
-  "version": 2
+  "version": 3,
+  "final_space": true
 }

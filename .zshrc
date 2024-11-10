@@ -1,5 +1,4 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-#
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
@@ -40,7 +39,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/mojada.omp.json)"
+eval "$(starship init zsh)"
 
 # Keybindings
 bindkey -e
@@ -81,10 +80,7 @@ alias ls="eza"
 alias la="eza -a"
 alias ll="eza -l"
 alias f="fuck"
-alias Hy="Hyprland"
-
-# sail
-alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+alias sail="./vendor/bin/sail"
 
 alias tn="tmux new -s \$(pwd | awk -F/ '{print \$NF}')"
 # Shell integrations
@@ -111,4 +107,4 @@ export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export GBM_BACKEND=nvidia-drm
 
 export terminal="wezterm"
-export EDITOR="nvim"
+export browser="zen-browser"
