@@ -1,2 +1,3 @@
 #!/bin/bash
-grimblast --notify copysave area
+[ ! -d ~/Pictures/Screenshots ] && mkdir -p ~/Pictures/Screenshots
+hyprshot -m region -o ~/Pictures/Screenshots/ -z
