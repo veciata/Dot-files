@@ -16,5 +16,5 @@ decorations = "Buttonless"
 size = 10  # İhtiyacınıza göre boyutu ayarlayın
 
 # Alternatif olarak Courier New fontunu kullanabilirsiniz
-normal.family = "Courier New"
+normal.family = "Source Code Pro"
 
