@@ -1,14 +1,6 @@
-@define-color color1 #282828;
-@define-color color2 #24283b;
-@define-color color3 #3d550c;
-@define-color color4 #81b622;
-@define-color color5 #ecf87f;
-@define-color color6 #59981a;
-/* 
-color1 bg color 
-color2 item bg color
-color3 item hover bg color
-color4  text color
-color5 second text color
-color6 line color 
- */ 
+@define-color color1 #F0F8FF; /* Dark, cool background color for a night theme */
+@define-color color2 #3B4252; /* Dark gray-blue for item backgrounds, giving a sleek, urban feel */
+@define-color color3 #434C5E; /* Slightly lighter gray-blue for hover effect, subtle glow effect on hover */
+@define-color color4 #FFF; /* White text color for readability on dark backgrounds */
+@define-color color5 #C0C0C0; /* Light gray text for secondary text, muted yet modern */
+@define-color color6 #007BA7; /* Muted gray with a blue tint for lines, separators, and borders */

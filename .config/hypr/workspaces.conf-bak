@@ -1,0 +1,26 @@
+$m1 = eDP-1
+$m2 = HDMI-A-1
+
+# Workspaces for $m1
+workspace=1,monitor:$m1
+workspace=2,monitor:$m1
+workspace=3,monitor:$m1
+workspace=4,monitor:$m1
+workspace=5,monitor:$m1
+workspace=6,monitor:$m1
+workspace=7,monitor:$m1
+workspace=8,monitor:$m1
+workspace=9,monitor:$m1
+workspace=10,monitor:$m1
+
+# Workspaces for $m2
+workspace=11,monitor:$m2
+workspace=12,monitor:$m2
+workspace=13,monitor:$m2
+workspace=14,monitor:$m2
+workspace=15,monitor:$m2
+workspace=16,monitor:$m2
+workspace=17,monitor:$m2
+workspace=18,monitor:$m2
+workspace=19,monitor:$m2
+workspace=20,monitor:$m2
