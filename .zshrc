@@ -39,7 +39,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/powerlevel10k_rainbow.omp.json)"
+eval "$(starship init zsh)"
 
 # Keybindings
 bindkey -e
@@ -80,6 +80,9 @@ alias ls="eza"
 alias la="eza -a"
 alias ll="eza -l"
 alias f="fuck"
+alias sail="./vendor/bin/sail"
+
+alias tn="tmux new -s \$(pwd | awk -F/ '{print \$NF}')"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd z zsh)"
@@ -96,3 +99,12 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 PATH=~/.console-ninja/.bin:$PATH
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export GBM_BACKEND=nvidia-drm
+
+export terminal="wezterm"
+export browser="zen-browser"
