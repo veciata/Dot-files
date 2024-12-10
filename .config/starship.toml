@@ -1,0 +1,42 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$lua\
+$php\
+$nodejs\
+$aws\
+$docker_context\
+$jobs\
+$cmd_duration\
+$line_break\
+$character"""
+palette = "nord"
+[fill]
+symbol = ' '
+
+
+[php]
+format = '[🔹 $version](147 bold) '
+[nodejs]
+format = '[📦 $version](147 bold)'
+
+
+[character]
+success_symbol = '[⟫](bold yellow) '
+error_symbol = '[✗](bold red) '
+
+[palettes.nord]
+dark_blue = '#5E81AC'
+blue = '#81A1C1'
+teal = '#88C0D0'
+red = '#BF616A'
+orange = '#D08770'
+green = '#A3BE8C'
+yellow = '#EBCB8B'
+purple = '#B48EAD'
+gray = '#434C5E'
+black = '#2E3440'
+white='#D8DEE9'
+
