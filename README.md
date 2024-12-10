@@ -37,9 +37,8 @@ To use this configuration, follow these steps:
    ```sh
    git clone https://github.com/veciata/Dot-files.git
 
-    Copy the configuration files to your home directory:
-
    ```
+
 
 2. manually link your config or clone like here
 
@@ -55,7 +54,7 @@ To use this configuration, follow these steps:
    sudo pacman -Syu hyprland waybar eza zsh  kitty wl-clipboard brightnessctl pavucontrol\
    grim slurp nemo network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
    ttf-firacode-nerd ttf-iosevka-nerd hypridle zoxide exa gsettings-desktop-schemas polkit-gnome thefuck\
-   kdeconnect ffmpeg nwg-look pulseaudio zellij pulsemixer btop partitionmanager bluez\
+   kdeconnect ffmpeg nwg-look pulseaudio tealdeer pulsemixer btop partitionmanager bluez\
    font-manager ark openssh speedtest-cli\
    thunderbird yazi nm-connection-editor hostapd mpd ncmpcpp mpc qbittorrent calcurse pulsemixer
 
