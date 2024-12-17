@@ -1,5 +1,5 @@
 $terminal="wezterm"
-$filemanager="dolphin"
+$filemanager="nemo"
 
 $m1 = eDP-1
 $m2 = HDMI-A-1

@@ -1,4 +1,4 @@
-@import url("./theme/mycolors.css");
+@import url("./theme/redblue.css");
 
 * {
   border: none;
@@ -16,7 +16,7 @@
 
 window#waybar {
   background: @color1;
-  background-color: rgba(123, 123, 123, 0.2);
+  background-color: @color1;
   border-bottom: 4px solid @color6;
   color: @color5;
 }

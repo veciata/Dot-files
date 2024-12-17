@@ -38,8 +38,6 @@ autoload -Uz compinit && compinit
 
 zinit cdreplay -q
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-eval "$(starship init zsh)"
 
 # Keybindings
 bindkey -e
@@ -69,6 +67,9 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 
 # Aliases
+
+
+alias vk='NVIM_APPNAME=nvim-k nvim'
 alias vi='nvim'
 alias lvim='/home/veciata/.local/bin/lvim'
 alias c='clear'
@@ -82,7 +83,9 @@ alias la="eza -a"
 alias ll="eza -l"
 alias f="fuck"
 alias cp="rsync --info=progress2"
+alias wezterm="wezterm start --always-new-process"
 
+alias sail="./vendor/bin/sail"
 alias tn="tmux new -s \$(pwd | awk -F/ '{print \$NF}')"
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -120,3 +123,6 @@ export PATH=$PATH:~/.npm-global/bin
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$PATH:/home/vecia/.config/composer/vendor/bin"
+
+eval "$(starship init zsh)"

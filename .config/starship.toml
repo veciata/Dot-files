@@ -6,6 +6,7 @@ $fill\
 $lua\
 $php\
 $nodejs\
+$bun\
 $aws\
 $docker_context\
 $jobs\

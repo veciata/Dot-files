@@ -25,11 +25,10 @@ while true; do
         # Kill the mpv preview
         kill $MPV_PID
         rm -rf ~/.wallpapers/*
+        ffmpeg -i $FULL_PATH -vf "select=eq(n\,1)" -vsync vfr ~/.wallpapers/wallpaper.jpg
         cp "$FULL_PATH" ~/.wallpapers/wallpaper.mp4
         ffmpeg -i ~/.wallpapers/wallpaper.mp4 -vf "fps=60,scale=1920:-1:flags=lanczos" -c:v gif -q:v 10 ~/.wallpapers/wallpaper.gif
-        notify-send "Wallpaper set to $SELECTED_VIDEO"
-        sleep 1
-        ~/.config/hypr/scripts/swww.sh
+        ~/.config/hypr/scripts/swww.sh && notify-send "Wallpaper set to $SELECTED_VIDEO"
         exit 0
     else
         kill $MPV_PID

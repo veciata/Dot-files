@@ -1,6 +1,6 @@
 $m1 = eDP-1
 $m2 = HDMI-A-1
-$m3 = DP-2
+$m3 = DP-1
 
 monitor=$m1,1920x1080@144,0x0,1, bitdepth, 10
 monitor= $m2,1920x1080@60,1920x0 ,1
