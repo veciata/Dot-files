@@ -129,7 +129,7 @@
     },
     "persistent-workspaces": {
       "DP-2": [1, 2, 3],
-      "HDMI-A-1": [11, 12, 13],
+      "eDP-1": [11, 12, 13],
     },
   },
   "custom/playerctl": {

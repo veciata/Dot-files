@@ -1,6 +1,0 @@
-$terminal="wezterm"
-$filemanager="nemo"
-
-$m1 = eDP-1
-$m2 = HDMI-A-1
-$m3 = DP-2

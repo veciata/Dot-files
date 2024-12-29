@@ -75,6 +75,11 @@ alias lvim='/home/veciata/.local/bin/lvim'
 alias c='clear'
 alias cd='z'
 
+alias run_xampp='docker run -d -p 8080:80 -v $(pwd):/opt/lampp/htdocs --name xampp tomsik68/xampp && chmod -R 755 $(pwd)'
+alias stop_xampp='docker stop xampp && docker rm xampp'
+
+alias run_apache='docker run -d -p 8080:80 -v $(pwd):/var/www/html --name apache_php php:8.2-apache && chmod -R 755 $(pwd)'
+alias stop_apache='docker stop apache_php && docker rm apache_php'
 alias docui="docker run --rm -itv /var/run/docker.sock:/var/run/docker.sock skanehira/docui"
 alias ai="ollama run llama3:70b"
 alias lal="eza --tree --level=2"
@@ -126,3 +131,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$PATH:/home/vecia/.config/composer/vendor/bin"
 
 eval "$(starship init zsh)"
+
+if [ -e /home/vecia/.nix-profile/etc/profile.d/nix.sh ]; then . /home/vecia/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
