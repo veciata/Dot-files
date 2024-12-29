@@ -1,0 +1,27 @@
+
+# By default Reload config with shft + cmd + , 
+
+theme = catppuccin-mocha
+background-opacity = 0.65
+background-blur-radius = 20
+
+font-family = JetBrainsMonoNL Nerd Font 
+font-size = 14
+cursor-style = block
+cursor-style-blink = true
+
+gtk-tabs-location=hidden
+
+confirm-close-surface = false
+window-decoration = false
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+auto-update = check
+
+
+# For Simple Keybinds
+keybind = alt+r=reload_config 
+keybind = alt+i=inspector:toggle
+
