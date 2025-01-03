@@ -69,11 +69,11 @@ To use this configuration, follow these steps:
    4. install python env for weather
 
    ````$ sh
-   cd & python -m ensurepip --upgrade\
-   pip install --upgrade pip &&\
-   pip install pyquery &&\
-   source ~/.pyvenv/bin/activate &&\
-   python3 -m venv ~/.pyvenv
+   python3 -m venv ~/.pyvenv &&
+   source ~/.pyvenv/bin/activate &&
+   cd & python -m ensurepip --upgrade &&
+   pip install --upgrade pip &&
+   pip install pyquery &&
    ```
    ````
 
