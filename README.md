@@ -56,7 +56,7 @@ To use this configuration, follow these steps:
    grim slurp nemo network-manager-applet playerctl ttf-jetbrains-mono papirus-icon-theme\
    ttf-firacode-nerd ttf-iosevka-nerd hypridle zoxide exa gsettings-desktop-schemas polkit-gnome thefuck\
    kdeconnect ffmpeg nwg-look pulseaudio zellij pulsemixer btop partitionmanager bluez\
-   font-manager ark openssh speedtest-cli\
+   font-manager ttf-firacode-nerd  ark openssh speedtest-cli\
    thunderbird yazi nm-connection-editor hostapd mpd ncmpcpp mpc qbittorrent calcurse pulsemixer
 
    yay -S papirus-icon-theme wallock wallock-git bibata-cursor-theme-bin nordic-theme\
