@@ -108,3 +108,11 @@ export GBM_BACKEND=nvidia-drm
 
 export terminal="wezterm"
 export browser="zen-browser"
+
+# bun completions
+[ -s "/home/veciata/.bun/_bun" ] && source "/home/veciata/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+fastfetch
