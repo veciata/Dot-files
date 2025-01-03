@@ -49,7 +49,7 @@ To use this configuration, follow these steps:
    cp Dot-files/.zshrc ~/
    ```
 
-3. install nesseserry packages
+   3. install nesseserry packages
 
    ```sh
    sudo pacman -Syu hyprland waybar eza zsh  kitty wl-clipboard brightnessctl pavucontrol\
@@ -65,6 +65,17 @@ To use this configuration, follow these steps:
    ```
 
    if you wanna change terminal you can do it on .zshrc $terminal and .config/hypr/defaultset.conf $terminal changes.
+
+   4. install python env for weather
+
+   ````$ sh
+   cd & python -m ensurepip --upgrade\
+   pip install --upgrade pip &&\
+   pip install pyquery &&\
+   source ~/.pyvenv/bin/activate &&\
+   python3 -m venv ~/.pyvenv
+   ```
+   ````
 
 ## Keybindings
 
@@ -84,14 +95,18 @@ Here are some of the keybindings defined in the configuration:
 
 ## Credits
 
-### Başlangıç olarak burdan çok fazla yararlandım global olması için ingilizce yazdım repoyu ama teşekkürümü Türkçe yapmalıyım. Dil değiştirmek istersenizde input.conf içerisinden değiştireblirsiniz.
+### Başlangıç olarak burdan çok fazla yararlandım global olması için ingilizce yazdım repoyu ama teşekkürümü Türkçe yapmalıyım. Dil değiştirmek istersenizde input.conf içerisinden değiştireblirsiniz
 
 ### "I have benefited a lot from here as a starting point, so I wrote the repo in English to make it more global, but I should express my gratitude in Turkish. If you want to change the language, you can do so from the input.conf file."
 
-https://github.com/yusufipk/hyprconf
+<https://github.com/yusufipk/hyprconf>
 
 Hyprland
 Waybar
 Rofi
 
 Feel free to customize and extend the configuration to suit your needs. If you encounter any issues or have suggestions, please open an issue on this repository.
+
+```
+
+```
